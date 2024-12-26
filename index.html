@@ -1,1 +1,450 @@
 
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Md Mostafijur Rahman's Homepage</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- UIkit CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/css/uikit.min.css" />
+
+        <!-- UIkit JS -->
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/js/uikit.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/js/uikit-icons.min.js"></script>
+
+        <style>
+            .uk-label{
+                color: black;
+                text-transform: none;
+                background-color: transparent;
+                border: 1px solid black;
+                padding: 0px 3px;
+            }
+	    .news{
+		    border: 1px solid black;
+		    width: 90%;
+		    height: 250px;
+		    overflow-x: auto;
+		    overflow-y: auto;
+		    border-color: #e5e5e5;
+		    padding: 10px;
+		    background-color: #fff;
+		    border-radius: 4mm;
+	    }
+	    .uk-text-bold {
+		    font-weight: 600;
+		}
+	    .uk-h2, h2 {
+		    font-size: 1.5rem;
+		}
+	    .uk-text-lead {
+		    font-size: 1.0rem;
+		    line-height: 1.5;
+		    color: #333;
+		}
+	   .uk-text-lead {
+		    font-size: 1.0rem;
+		    line-height: 1.5;
+		    color: #800000;
+		}
+        </style>
+    </head>
+    <body style="background-color: #FFFFFF">
+        <nav class="uk-navbar-container uk-margin uk-light" style="background-color: #BF5701" uk-navbar>
+            <div class="uk-navbar-left">
+                <a class="uk-navbar-item uk-logo uk-text-primary" href="index.html">Md Mostafijur Rahman's Homepage</a>
+            </div>
+            <div class="uk-navbar-right">
+                <ul class="uk-navbar-nav">
+                    <li class="uk-active uk-visible@m"> <a href="index.html"> Home </a> </li>
+                    <li class="uk-active uk-visible@m"> <a href="index.html#research"> Research </a> </li>
+                    <li class="uk-active uk-visible@m"> <a href="resources.html"> Resources </a> </li>
+                    <li class="uk-active uk-visible@m"> <a href="index.html#contact"> Contact </a> </li>
+                    <li class="uk-active uk-visible@m"> <a href="index.html#bio"> About </a> </li>
+                    <a class="uk-active uk-navbar-toggle uk-hidden@m" uk-navbar-toggle-icon href="#offcanvas-nav-primary" uk-toggle></a>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="offcanvas-nav-primary" uk-offcanvas="overlay: true">
+            <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+                <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+                    <li class="uk-active"> <a href="index.html"> Home </a> </li>
+                    <li class="uk-active"> <a href="index.html#research"> Projects </a> </li>
+                    <li class="uk-active"> <a href="resources.html"> Resources </a> </li>
+                    <li class="uk-active"> <a href="index.html#contact"> Contact </a> </li>
+                    <li class="uk-active"> <a href="index.html#bio"> About </a> </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <!-- <div class="uk-section uk-flex uk-flex-center uk-section-secondary uk-light"> -->
+        <div class="uk-flex uk-flex-center">
+            <div class="uk-container uk-width-1-1 uk-width-3-4@m uk-padding-small" uk-grid>
+            <!-- <div class="uk-container uk-container-large uk-flex-middle uk-padding-small" uk-grid> -->
+                <a class="uk-flex uk-flex-center uk-width-1-1 uk-width-auto@m" href="#">
+                    <div class="uk-width-1-3 uk-width-small@s uk-visible@l">
+                        <img class="uk-border-circle uk-responsive-height uk-responsive-width" src="new_dp.jpeg" alt="Portrait" />
+                    </div>
+                </a>
+                <div class="uk-width-expand uk-margin-remove">
+                    <p class="uk-h1 uk-text-center uk-text-left@m uk-width-expand@m uk-margin-remove">
+                        Md Mostafijur Rahman
+                    </p>
+                    <p>
+                        I am a Ph.D. student at the 
+			<a href = "https://www.ischool.utexas.edu/" style="color:#800000">
+			The University of Texas at Austin</a> working with <b><a href = "https://radum.ece.utexas.edu/people/" style="color:#800000">Prof. Radu Marculescu</b>.</a> I am a member of 
+			<b>System Level Design Group
+			<a href = "https://radum.ece.utexas.edu/" style="color:#800000">(SLD)</a> @UT Austin</b>.
+                        My research interests are centered around AI in Healthcare, particularly applying Deep Learning to Biomedical Imaging. I have extensive experience in areas like Lightweight/Efficient AI and Generative AI for 2D/3D Image or Video Segmentation, Reconstruction, Denoising, Enhancement, Translation, Synthesis, and Classification. Additionally, I focus on Self-supervised Learning and Multi-modal AI, both of which are crucial in advancing AI-driven healthcare solutions. 
+			My research accomplishments are evidenced by several impactful publications in top-tier venues, e.g., CVPR, WACV, MIDL, ICASSAP, etc. In the past, I have interned at National Institutes of Health (NIH) and Robert Bosch Research.
+                    </p>
+		    <p>
+			    Prior to joining UT Austin, I was a Graduate Student in Software Engineering at 
+					<a href = "http://www.iitkgp.ac.in/" style="color:#800000">University of Dhaka</a>. 
+					I was advised by 
+					<a href = "https://www.du.ac.bd/faculty/faculty_details/IIT/30" style="color:#800000">Prof. Mohammad Shoyaib</a>. 
+			    		I have also spent four wonderful years as a faculty (Assistant professor and Lecturer) at University of Barishal. I had also an oppertunity to work as a Senior Software Enginner at Advanced Solution Lab, Samsung Research, Bangladesh.
+	            </p>
+		    <!--<p style="color:#fc2403"> <b> &#9827; I am currently on the job market looking for industry positions starting April-May 2025. &#9827;</b></p>-->
+                    <!-- Buttons for desktop device -->
+                    <div class="uk-margin-horizontal uk-visible@m">
+                        <a href="#contact" class="uk-button uk-button-default uk-margin-small-right"> Mail </a>
+                        <a href="https://scholar.google.com/citations?user=e0SzHPMAAAAJ" class="uk-button uk-button-default uk-margin-small-right">Scholar </a>
+                        <a href="https://github.com/mostafij-rahman" class="uk-button uk-button-default uk-margin-small-right"> GitHub </a>
+                        <a href="https://www.linkedin.com/in/mostafij-rahman/" class="uk-button uk-button-default uk-margin-small-right"> LinkedIn </a>
+			<a href="https://utexas.box.com/s/f93s0hfwhyxsbit74edl01ejw7o049of" class="uk-button uk-button-default uk-margin-small-right"> Resume/CV </a>
+                    </div>
+                    <!-- Buttons for mobile device -->
+                    <div class="uk-margin-horizontal uk-flex uk-flex-center uk-hidden@m">
+                        <a href="#contact" class="uk-button uk-button-default uk-margin-small-right" uk-icon="mail"></a>
+                        <a href="https://scholar.google.com/citations?user=e0SzHPMAAAAJ" class="uk-button uk-button-default uk-margin-small-right" uk-icon="google"></a>
+                        <a href="https://github.com/mostafij-rahman" class="uk-button uk-button-default uk-margin-small-right" uk-icon="github"></a>
+                        <a href="https://www.linkedin.com/in/mostafij-rahman/" class="uk-button uk-button-default uk-margin-small-right" uk-icon="linkedin"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Body -->
+        <div class="uk-flex uk-flex-center uk-margin-remove-top uk-margin-medium-bottom">
+        <div class="uk-container uk-width-1-1 uk-width-3-4@m uk-padding-small">
+
+            <p id="news" class="uk-h2 uk-text-bold">Recent News</p>
+            <ul class="uk-list uk-list-bullet uk-margin-small-bottom news">
+		<!--<li>09/2024 2 papers (<a href = "https://arxiv.org/abs/2404.03865" style="color:#800000">FNN-SkipLLM</a>
+			, <a href = "" style="color:#800000">C4 Pruning Enough?</a>) accepted to EMNLP Main Track 2024.
+		<li>05/2024 5 papers (<a href = "https://arxiv.org/pdf/2310.02277" style="color:#800000">JunkDNA</a>, <a href = "https://arxiv.org/pdf/2403.15447" style="color:#800000">Compressed LLM Trust</a> 
+			, <a href = "https://openreview.net/forum?id=OrVl8R13Wy" style="color:#800000">Sparse Cocktail</a>, <a href = "https://arxiv.org/pdf/2310.05175" style="color:#800000">OWL Sparsity</a>
+			, <a href = "https://arxiv.org/abs/2402.08170" style="color:#800000">LLM Graph Assistant</a>) accepted to ICML 2024.
+		<li>01/2024 1 paper (<a href = "https://arxiv.org/abs/2310.01382" style="color:#800000">LLM-KICK</a>) accepted to ICLR 2024 from internship at Apple.</li>
+		<li>07/2023 1 paper (<a href = "https://arxiv.org/abs/2306.03805" style="color:#800000">LLM Essential Sparsity</a> || <a href = "https://github.com/VITA-Group/essential_sparsity" style="color:#800000">[Code]</a>) accepted to NeurIPS 2023.</li>
+		<li>07/2023 1 paper accepted to ICCV 2023.</li>
+		<li>05/2023 I joined Apple AI/ML team to work with Yinfei Yang, Zhe Gan, and Xianzhi Du. 
+		<li>04/2023 3 papers (2-first authors with one ORAL) accepted to ICML 2023.</li>
+		<li>01/2023 2 papers2 accepted to ICLR 2023.</li>
+		<li>10/2022 1 paper accepted to WACV 2023.</li>
+		<li>09/2022 1 paper accepted to NeurIPS 2022.</li>
+		<li>08/2022 1 paper accepted to ICDM 2022.</li>
+		<li>07/2022 1 paper accepted to ECCV 2022.</li>
+		<li>06/2022 Spending Summer 2022 in Adobe Research as Computational Photography/Computer Vision Intern.</li>
+                <li>05/2022 1 paper accepted to ICML 2022 (Spotlight).</li>
+                <li>01/2022 Awarded Professional Development Fellowship by School of Information, UT Austin</li>
+		<li>08/2021 1 paper accepted to ML4H 2021.</li>
+		<li>07/2021 1 paper accepted to ICDM 2021.</li>
+            </ul>
+
+            <p id="research" class="uk-h2 uk-text-bold">Selected Publication
+		    [<b><a href = "https://scholar.google.com/citations?user=I783HxYAAAAJ&hl=en" style="color:#FF4422;">Full List</a></b>]</p>
+            (A superscript * denotes equal contribution)
+            <ul class="uk-list uk-margin-small-bottom">
+		
+		<li>
+                    <div class="uk-text-lead"><span style="color:#b30749"><b>[XXXXXX 2025]</b></span> &nbsp;  Fantastic Experts and How to Find Them: A Multi-Dimensional Study for Experts-Level Sparsification in Mixture-of-Experts</div>
+                    <div> <b>Md Mostafijur Rahman</b>, Jianyu Wang, Yixiao Li, Pingzhi Li, Tianlong Chen, Zhangyang Wang, Chong Wang, Ruoming Pang, Xianzhi Du. </div>
+                    <div class="uk-text-lead"></div>
+		    <a href="#" target="_blank" class="uk-button uk-button-text">[Paper]</a>
+                    <a href="#" target="_blank" class="uk-button uk-button-text">[Code]</a>
+                </li>
+		<li>
+                    <div class="uk-text-lead"><span style="color:#b30749"><b>[XXXXXX 2025]</b></span> &nbsp;  From GaLore to WeLore: How Low-Rank Weights Non-uniformly Emerge from Low-Rank Gradients.</div>
+                    <div> <b>Md Mostafijur Rahman</b>, Lu Yin, Zhenyu Zhang, Shiwei Liu, Jiawei Zhao, Yuandong Tian, and Zhangyang Wang. </div>
+                    <div class="uk-text-lead"></div>
+		    <a href="https://arxiv.org/abs/2407.11239v1" target="_blank" class="uk-button uk-button-text">[Paper]</a>
+                    <a href="https://github.com/VITA-Group/welore" target="_blank" class="uk-button uk-button-text">[Code]</a>
+		    <a href="https://www.linkedin.com/pulse/from-galore-welore-gradients-low-rank-what-weights-atlas-wang-6tubc/" target="_blank" class="uk-button uk-button-text">[Blog]</a>
+                </li>
+
+		<li>
+                    <div class="uk-text-lead"><span style="color:#b30749"><b>[XXXXXX 2025]</b></span> &nbsp;  Q-GaLore: Quantized GaLore with INT4 Projection and Layer-Adaptive Low-Rank Gradients.</div>
+                    <div> Zhang, Zhenyu, <b>Md Mostafijur Rahman</b>, Lu Yin, Shiwei Liu, Jiawei Zhao, Yuandong Tian, and Zhangyang Wang. </div>
+                    <div class="uk-text-lead"></div>
+		    <a href="https://arxiv.org/abs/2407.08296" target="_blank" class="uk-button uk-button-text">[Paper]</a>
+                    <a href="https://github.com/VITA-Group/Q-GaLore" target="_blank" class="uk-button uk-button-text">[Code]</a>
+	            <a href="https://www.linkedin.com/pulse/introducing-galore-v2-q-galore-latest-milestone-low-rank-atlas-wang-lpijc/?trackingId=s34rOTOYRZ2TKiEbTeT6fg%3D%3D" target="_blank" class="uk-button uk-button-text">[Blog]</a>
+                </li>
+		<li>
+                    <div class="uk-text-lead"><span style="color:#b30749"><b>[XXXXXX 2025]</b></span> &nbsp;  Bit-Flip Error Resilience in LLMs: A Comprehensive Analysis and Defense Framework</div>
+                    <div> Yuhang Chen, Zhen Tan, <b>Md Mostafijur Rahman</b>, Huaizhi Qu, Xinyu Zhao, Qi Lin, Yu Cheng, Andrew Kwong, Zhichao Cao, Tianlong Chen. </div>
+                    <div class="uk-text-lead"></div>
+		    <a href="#" target="_blank" class="uk-button uk-button-text">[Paper]</a>
+                    <a href="#" target="_blank" class="uk-button uk-button-text">[Code]</a>
+                </li>
+		<li>
+                    <div class="uk-text-lead"><span style="color:#b30749"><b>[EMNLP Main 2024]</b></span> &nbsp;  FFN-SkipLLM: A Hidden Gem for Autoregressive Decoding with Adaptive Feed Forward Skipping.</div>
+                    <div> <b>Md Mostafijur Rahman</b>, Bodun Hu, Lu Yin, Yeonju Ro, Shiwei Liu, Tianlong Chen, and Aditya Akella.  </div>
+                    <div class="uk-text-lead"></div>
+		    <a href="https://arxiv.org/abs/2404.03865" target="_blank" class="uk-button uk-button-text">[Paper]</a>
+                    <a href="#" target="_blank" class="uk-button uk-button-text">[Code]</a>
+                </li>
+
+		<li>
+                    <div class="uk-text-lead"><span style="color:#b30749"><b>[ICML 2024]</b></span> &nbsp;  LLaGA: Large Language and Graph Assistant.</div>
+                    <div> Chen, Runjin, Tong Zhao, <b>Md Mostafijur Rahman</b>, Neil Shah, and Zhangyang Wang.  </div>
+                    <div class="uk-text-lead"></div>
+		    <a href="https://arxiv.org/abs/2402.08170" target="_blank" class="uk-button uk-button-text">[Paper]</a>
+                    <a href="https://github.com/VITA-Group/LLaGA" target="_blank" class="uk-button uk-button-text">[Code]</a>
+                </li>
+
+		<li>
+                    <div class="uk-text-lead"><span style="color:#b30749"><b>[ICML 2024]</b></span> &nbsp;  Junk DNA Hypothesis: A Task-Centric Angle of LLM Pre-trained Weights through Sparsity.</div>
+                    <div> *Lu Yin, *<b>Md Mostafijur Rahman</b>, Shiwei Liu, Souvik Kundu, and Zhangyang Wang.  </div>
+                    <div class="uk-text-lead"></div>
+		    <a href="https://arxiv.org/abs/2310.02277" target="_blank" class="uk-button uk-button-text">[Paper]</a>
+                    <a href="https://github.com/VITA-Group/Junk_DNA_Hypothesis.git" target="_blank" class="uk-button uk-button-text">[Code]</a>
+                </li>
+
+		<li>
+                    <div class="uk-text-lead"><span style="color:#b30749"><b>[ICLR 2024]</b></span> &nbsp;  Compressing llms: The Truth is Rarely Pure and Never Simple.</div>
+                    <div> <b>Md Mostafijur Rahman</b>, Zhe Gan, Xianzhi Du, Bowen Zhang, Zhangyang Wang, and Yinfei Yang.  </div>
+                    <div class="uk-text-lead"></div>
+		    <a href="https://arxiv.org/abs/2310.01382" target="_blank" class="uk-button uk-button-text">[Paper]</a>
+                    <a href="https://github.com/VITA-Group/llm-kick" target="_blank" class="uk-button uk-button-text">[Code]</a>
+                </li>
+
+		<li>
+                    <div class="uk-text-lead"><span style="color:#b30749"><b>[NeurIPS 2023]</b></span> &nbsp;  The Emergence of Essential Sparsity in Large Pre-trained Models: The Weights that Matter.</div>
+                    <div> <b>Md Mostafijur Rahman</b>, Shiwei Liu, Tianlong Chen, and Zhangyang  Wang.  </div>
+                    <div class="uk-text-lead"></div>
+		    <a href="https://arxiv.org/abs/2306.03805" target="_blank" class="uk-button uk-button-text">[Paper]</a>
+                    <a href="https://github.com/VITA-Group/essential_sparsity" target="_blank" class="uk-button uk-button-text">[Code]</a>
+                </li>
+
+		<li>
+                    <div class="uk-text-lead"><span style="color:#b30749"><b>[ICML 2023]</b></span> &nbsp;  Instant Soup: Cheap Pruning Ensembles in A Single Pass Can Draw Lottery Tickets from Large Models.</div>
+                    <div> <b>Md Mostafijur Rahman</b>, Shiwei Liu, Tianlong Chen, Ying Ding, and Zhangyang  Wang.  </div>
+                    <div class="uk-text-lead"></div>
+		    <a href="https://proceedings.mlr.press/v202/jaiswal23b.html" target="_blank" class="uk-button uk-button-text">[Paper]</a>
+                    <a href="https://github.com/VITA-Group/instant_soup" target="_blank" class="uk-button uk-button-text">[Code]</a>
+                </li>
+
+		<li>
+                    <div class="uk-text-lead"><span style="color:#b30749"><b>[ICML 2023]</b></span> &nbsp;  Graph ladling: Shockingly Simple and Parallel GNN Training without Intermediate Communication.</div>
+                    <div> <b>Md Mostafijur Rahman</b>, Shiwei Liu, Tianlong Chen, Ying Ding, and Zhangyang  Wang.  </div>
+                    <div class="uk-text-lead"></div>
+		    <a href="https://arxiv.org/abs/2306.10466" target="_blank" class="uk-button uk-button-text">[Paper]</a>
+                    <a href="https://github.com/VITA-Group/graph_ladling" target="_blank" class="uk-button uk-button-text">[Code]</a>
+                </li>
+
+		<li>
+                    <div class="uk-text-lead"><span style="color:#b30749"><b>[ICLR 2023]</b></span> &nbsp;  Sparsity May Cry: Let Us Fail (Current) Sparse Neural Networks Together!</div>
+                    <div>  Shiwei Liu, Tianlong Chen, Zhenyu Zhang, Xuxi Chen, Tianjin Huang, <b>Md Mostafijur Rahman</b>, and Zhangyang Wang.  </div>
+                    <div class="uk-text-lead"></div>
+		    <a href="https://arxiv.org/abs/2303.02141" target="_blank" class="uk-button uk-button-text">[Paper]</a>
+                    <a href="https://github.com/VITA-Group/SMC-Bench" target="_blank" class="uk-button uk-button-text">[Code]</a>
+                </li>
+
+		<li>
+                    <div class="uk-text-lead"><span style="color:#b30749"><b>[ICLR 2023]</b></span> &nbsp;  Sparse moe as the new dropout: Scaling Dense and self-slimmable transformers.</div>
+                    <div>  Tianlong Chen, Zhenyu Zhang, <b>Md Mostafijur Rahman</b>, Shiwei Liu, and Zhangyang Wang.  </div>
+                    <div class="uk-text-lead"></div>
+		    <a href="https://arxiv.org/abs/2303.01610" target="_blank" class="uk-button uk-button-text">[Paper]</a>
+                    <a href="https://github.com/VITA-Group/Random-MoE-as-Dropout" target="_blank" class="uk-button uk-button-text">[Code]</a>
+                </li>
+
+		<li>
+                    <div class="uk-text-lead"><span style="color:#b30749"><b>[NeurIPS 2022]</b></span> &nbsp;  Old can be Gold: Better Gradient Flow can Make Vanilla-GCNs Great Again.</div>
+                    <div> <b>Md Mostafijur Rahman</b>, Peihao Wang, Tianlong Chen, Justin Rousseau, Ying Ding, and Zhangyang Wang.  </div>
+                    <div class="uk-text-lead"></div>
+		    <a href="https://proceedings.neurips.cc/paper_files/paper/2022/hash/31df5479712197232485d4c2387f6033-Abstract-Conference.html" target="_blank" class="uk-button uk-button-text">[Paper]</a>
+                    <a href="https://github.com/VITA-Group/GradientGCN" target="_blank" class="uk-button uk-button-text">[Code]</a>
+                </li>
+
+		<li>
+                    <div class="uk-text-lead"><span style="color:#b30749"><b>[ICML 2022]</b></span> &nbsp;  Training Your Sparse Neural Network Better with Any Mask.</div>
+                    <div> <b>Md Mostafijur Rahman</b>, Haoyu Ma, Tianlong Chen, Ying Ding, and Zhangyang Wang.  </div>
+                    <div class="uk-text-lead"></div>
+		    <a href="https://arxiv.org/abs/2206.12755" target="_blank" class="uk-button uk-button-text">[Paper]</a>
+                    <a href="https://github.com/VITA-Group/ToST" target="_blank" class="uk-button uk-button-text">[Code]</a>
+                </li>
+            </ul>
+
+            <p class="uk-h2 uk-text-bold">Teaching & Service</p>
+            <ul class="uk-list uk-list-bullet">
+		<li>
+                    Workshop Organizer: Edge-Device Large Language Model Competition in conjunction with NeurIPS 2024 [<a href = "https://edge-llms-challenge.github.io/edge-llm-challenge.github.io/" style="color:#800000">Link</a>].
+		</li>
+
+                <li>
+                    Conference Reviewer: TMLR 2024, EMNLP 2024, NeurIPS 2024,2023; ICLR 2024,2023; ICML 2024,2023,2022, ICME 2022/2023, ICDM 2022, KDD 2022.
+		</li>
+		<li>
+                    Teaching Assistant - OS programming and ML/DS Programming [IIT Kharagpur]
+		</li>
+            </ul>
+
+            <p id="contact" class="uk-h2 uk-text-bold">Contact</p>
+            <div class="uk-child-width-1-2@m" uk-grid>
+                <div class="uk-width-large">
+                    <div class="uk-card uk-card-default uk-card-hover uk-card-body">
+                        <h3 class="uk-card-title">Address</h3>
+                        <p>
+                            UTA 5.410 <br/>
+                            1616 Guadalupe St <br/>
+                            Austin, TX  <br/>
+                            United States <br/>
+                            78712
+                        </p>
+                    </div>
+                </div>
+                <div class="uk-width-large">
+                    <div class="uk-card uk-card-primary uk-card-hover uk-card-body"  style="background-color: #BF5701">
+                        <h3 class="uk-card-title">Email</h3>
+                        <p>
+                            <b>Academic</b> <br/>
+                            ajayjaiswal [at] utexas.edu
+                            <br/><br/>
+                            <b>Other Use</b> <br/>
+                            ajayjaiswalhi [at] gmail.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <p id="bio", class="uk-h2 uk-text-bold">About Me</p>
+            <article class="uk-article">
+		Born is a small town (Belthara) in Eastern UP, India, I got my hands on a computer first time during my undergraduate freshman year. 
+		My journey in computer science began when I was sixteen year old with a fantastic book "Let Us C" by Yashavant Kanetkar. During my career, I have 
+		always tried to make best use of resources and smart people around me to learn and grow. I identified my research potential while working with Prof. Animesh 
+		Mukherjee in IIT Kharagpur and later spent some wonderful time in Samsung Research after graduating. Currently, with the grace of GOD, I am very previlaged
+		to work and supervised by some extremely brilliant minds in <a href = "https://vita-group.github.io/" style="color:#800000">VITA</a> 
+		and  <a href = "https://aihealth.ischool.utexas.edu/" style="color:#800000">AI Health </a> @ UT Austin.
+                <blockquote cite="#">
+                    <p class="uk-margin-small-bottom">Somewhere, something incredible is waiting to be known.</p>
+                    <footer><cite>Prof. Carl Sagan</cite></footer>
+                </blockquote>
+		<a href="https://www.easycounter.com/">
+			<img src="https://www.easycounter.com/counter.php?ajayjaiswal23"
+			border="0" alt="Free Hit Counters"></a>
+			<br><a href="https://www.easycounter.com/">Visitor Counter</a>
+            </article>
+        </div>
+        </div>
+
+
+        
+
+        <!-- Footer -->
+        <div class="uk-section uk-flex uk-flex-center uk-section-secondary uk-height-small" style="background-color: #BF5701">
+            <div class="uk-container uk-container-large uk-text-primary">
+                <p class="uk-text-small uk-text-center">Copyright &copy; 2024 Md Mostafijur Rahman. All Rights Reserved.</p>
+                <p class="uk-text-small uk-text-center">Powered by <span uk-icon="uikit">UIkit</span></p>
+            </div>
+        </div>
+
+    </body>
+</html>
+
+
+<!-- 		<div class="blurb" style="font-family: Arial, Helvetica, sans-serif;">
+			<div style="width:750px; height:400px;  float:right; margin-top:20px;">
+				<p style="font-size:20px;display: inline-block;">I am a Ph.D. student at the 
+					<a href = "https://www.ischool.utexas.edu/" style="color:#800000">
+					School of Information, UT Austin</a>. I am fortunate to be advised by 
+					<b><a href = "https://yingding.ischool.utexas.edu/" style="color:#800000">Prof. Ying Ding</a></b>, and 
+					<b><a href = "https://www.ece.utexas.edu/people/faculty/atlas-wang" style="color:#800000">Prof. Atlas Wang</b>.</a> I am a member of 
+					<b>Visual Informatics Group
+					<a href = "https://vita-group.github.io/" style="color:#800000">(VITA)</a> @UT Austin</b>. 
+					My primary research revolves around Multi-Modal Systems, Model Interpretability and Optimization. I am currently working on 
+					designing and improving explainability of the
+					training recipe for Sparse Neural Networks. I am also developing AI algorithms 
+					across computer vision, natural language processing which assists in critical medical decision-making.</p>
+
+				<p style="font-size:20px;display: inline-block;">Prior to joining UT Austin, I completed my Masters in Computer Science from 
+					<a href = "http://www.iitkgp.ac.in/" style="color:#800000">Indian Institute of Technology, Kharagpur</a>. 
+					I was advised by 
+					<a href = "https://cse.iitkgp.ac.in/~animeshm/" style="color:#800000">Prof. Animesh Mukherjee</a> and 
+					<a href = "https://cse.iitkgp.ac.in/~pawang/" style="color:#800000">Prof. Pawan Goyal</a> at the CNeRG Lab. I have also worked as Lead Research Engineer 
+					at Advanced Technology Lab, Samsung Electronics, India under the supervision of
+					<a href="https://scholar.google.com/citations?hl=en&user=E6Gasu0AAAAJ&view_op=list_works&sortby=pubdate" style="color:#800000">Dr. Vijay Narayan Tiwari</a>.</p>
+				<p style="font-size:20px;display: inline-block; color:red"><i>Somewhere, something incredible is waiting to be known.</i> ~Prof. Carl Sagan</p>
+			</div>
+			<img src="/picturedp.PNG" alt="Italian Trulli" style="width:200px;height:200px;">
+			<h3>Md Mostafijur Rahman</h3>
+			<p>PhD Student - UT Austin</p>
+			<p>School of Information</p>
+			<p style="font-size:12px">Office: UTA 5.410, 1616 Guadalupe St</p>
+			<ul>
+				   <li><a href="mailto:ajayjaiswal@utexas.edu">Email</a></li>
+				   <li><a href="https://scholar.google.com/citations?user=I783HxYAAAAJ&hl=en">Google Scholar</a></li>
+			</ul>
+		</div> 
+		<h2 style = "font-size:20px">News Updates</h2>
+		<hr/>
+		<div style ="font-size:14px; font-family: Arial, Helvetica, sans-serif;">
+			<strong>May, 2022</strong> &emsp;Our work - 'Training Your Sparse Neural Network Better with Any Mask' got accpeted at <a href = "https://icml.cc/Conferences/2022/CallForPapers" style="color:#800000">ICML 2022</a>.</br>
+			<strong>Feb, 2022</strong> &emsp; Awarded Professoional Development Award by School of Information, UT Austin </br> 
+			<strong>Oct, 2021</strong> &emsp;Our work - 'RadBERT-CL: Factually-Aware Contrastive Learning ForRadiology Report Classification' got accpeted at <a href = "https://ml4health.github.io/2021/index.html" style="color:#800000">ML4H 2021</a>.</br>
+			<strong>Aug, 2021</strong> &emsp;Our work - 'SCALP - Supervised Contrastive Learning for Cardiopulmonary Disease Classification and Localization in Chest X-rays using Patient Metadata' got accpeted at <a href = "https://icdm2021.auckland.ac.nz/" style="color:#800000">ICDM 2021</a>.</br>
+			<strong>JuL, 2021</strong> &emsp;Winner of the <a href = "https://aihealth.ischool.utexas.edu/AIHealthChallenge/index.html" style="color:#800000">AI Health Data Challenge</a> at UT Austin. (First Prize - $1000)</br>
+			<strong>Jun, 2021</strong> &emsp;Our work - 'Using Radiomics as Prior Knowledge for Thorax Disease Classification and Localization in Chest X-rays' got accpeted at AMIA 2021.</br>
+			<strong>Jun, 2021</strong> &emsp;Started Working as Graduate Research Assistant with <a href = "http://www.katrinerk.com/" style="color:#800000"> Prof. Katrin Erk </a> on Narrative Inference. </br>
+			<strong>Mar, 2021</strong> &emsp;Presented our paper "Understanding Parachuting Collaboration" at iConference 2021.</br>
+			<strong>Jan, 2021</strong> &emsp;Started PhD in Information Science at University of Texas at Austin</br>
+			<strong>Jan, 2021</strong> &emsp;Receipent of Kilgarlin Fellowship ($2,500/semester - 2021 to 2024)</br>
+			<strong>Jan, 2021</strong> &emsp;Receipent of William and Margaret Kilgarlin Endowed Scholarship ($54,750 - 2021 to 2022)</br>
+			<strong>Dec, 2020</strong> &emsp;Left job at Advanced Technology Lab, Samsung Electronics, Banglore, India.</br>
+			<strong>Feb, 2020</strong> &emsp;Our submitted systems ranked 2nd, and 3rd place for Task 4, and 11 at 
+						<a href = "https://alt.qcri.org/semeval2020/index.php?id=tasks" style="color:#800000">SemEval 2020</a>.</br>
+		</div>
+		<h2 style = "font-size:16px">Select Publications (*Equal Contribution)</h2>
+		<hr/>
+		<div style ="font-size:14px; font-family: Arial, Helvetica, sans-serif;">
+			<p><strong>Training Your Sparse Neural Network Better with Any Mask</strong><br/>
+			<u>Md Mostafijur Rahman</u>, Haoyu Ma, Tianlong Chen, Ying Ding, Ying Ding, Atlas Wang<br/>
+		        International Conference on Machine Learning (ICML), 2022. 
+			</p>
+			<p><strong>RadBERT-CL: Factually-Aware Contrastive Learning ForRadiology Report Classification</strong><br/>
+			<u>Md Mostafijur Rahman</u>, Liyan Tang, Meheli Ghosh, Justin Rousseau, Yifan Peng, and Ying Ding<br/>
+		        2021 Machine Learning for Health (ML4H 2021)
+			</p>
+			<p><strong>SCALP - Supervised Contrastive Learning for Cardiopulmonary Disease Classification and Localization in Chest X-rays using Patient Metadata</strong><br/>
+			<u>Md Mostafijur Rahman</u>, Tianhao Li, Cyprian Zander, Yan Han, Justin Rousseau, Yifan Peng, and Ying Ding<br/>
+		        2021 21st IEEE International Conference on Data Mining (ICDM 2021)
+			</p>
+			<p><strong>Using Radiomics as Prior Knowledge for Abnormality Classification and Localization in Chest X-rays</strong><br/>
+			Yan Han, Chongyan Chen, Liyan Tang, Mingquan Lin, <u>Md Mostafijur Rahman</u>, Ying Ding, Yifan Peng<br/>
+		        2021 American Medical Informatics Association Annual Symposium 
+			</p>
+			<p><strong>Understanding Parachuting Collaboration</strong><br/>
+			<u>Md Mostafijur Rahman</u>, Meijun Liu, Ying Ding<br/>
+		        2021 Diversity, Divergence, Dialogue: 16th International Conference, iConference 
+			</p>
+			<p><strong>Ensemble Architecture for Fine-Tuned Propaganda Detection in News Articles</strong><br/>
+			Mayank Raj*, <u>Md Mostafijur Rahman</u>*, RR Rohit, Ankita Gupta, Sudeep Kumar Sahoo, Vertika Srivastava, Yeon Hyang Kim<br/>
+			2020 Proceedings of the Fourteenth Workshop on Semantic Evaluation, 1802-1807
+			</p>
+			<p><strong>Be Reasonable: Exploiting Large-scale Language Models for Commonsense Reasoning</strong><br/>
+			Vertika Srivastava, Sudeep Kumar Sahoo, Yeon Hyang Kim, Rohit Rr, Mayank Raj, <u>Md Mostafijur Rahman</u><br/>
+			2020 Proceedings of the Fourteenth Workshop on Semantic Evaluation, 585-593
+			</p>
+			<p><strong>Understanding the impact of early citers on long-term scientific impact</strong><br/>
+			Mayank Singh, <u>Md Mostafijur Rahman</u>, Priya Shree, Arindam Pal, Animesh Mukherjee, Pawan Goyal<br/>
+			2017 ACM/IEEE Joint Conference on Digital Libraries (JCDL)
+			</p>
+		</div>
+ -->
+
