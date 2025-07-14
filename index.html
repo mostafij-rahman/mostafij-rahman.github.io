@@ -31,19 +31,31 @@
 		    padding: 10px;
 		    background-color: #fff;
 		    border-radius: 4mm;
+		    
 	    }
+	     
 	    /* 1️⃣  Remove marker from the “Read more…” <li> only */
 	    .news li.read-more { list-style-type:none; margin-left:0; padding-left:0; }
 	
-	    /* 2️⃣  Make the summary look like a link (optional aesthetics) */
+	    /* make entire news list free of internal scrollbars  */
+	    .news           { overflow:visible;   }   /* top UL    */
+	    .news details   { overflow:visible;   }   /* disclosure */
+	
+	    /* style the summary like a text link, no system box  */
 	    .news summary {
+	        display:inline-block;             /* shrink to text width      */
 	        cursor:pointer;
-	        color:#004fa3;
+	        border:none; background:none;     /* kill default grey box     */
+	        color:#004fa3;                    /* link colour               */
 	        text-decoration:underline;
+	        outline:none;                     /* no blue focus border      */
+	        padding:0; margin:0;
 	    }
-	    /* Optional: remove the default ▼/▶ marker provided by browsers */
-	    .news summary::-webkit-details-marker { display:none; }  /* Chrome/Safari */
-	    .news summary::marker             { content:""; }        /* Firefox */
+	    /* keep nested bullets flush with top-level bullets    */
+	    .news li.read-more details ul {
+	        margin:0;
+	        padding-left:1.4em;               /* same indent as uk-list-bullet */
+	    }
 	    .uk-text-bold {
 		    font-weight: 600;
 		}
