@@ -25,15 +25,28 @@
                 border: 1px solid black;
                 padding: 0px 3px;
             }
-	    .social-icon{
-	    	/* your existing circle styles ... */
-	    	background:#000;
-	    }
-	    .social-icon i{         /* <- glyph itself */
-		color:#fff !important;
-	    	font-size:28px;     /* same size as before */
-	    	line-height:60px;   /* vertically center */
-	    }
+	    /*───────── SOCIAL CIRCLES ─────────*/
+	  .social-icon{
+	      display:inline-flex;           /* center the glyph           */
+	      align-items:center;
+	      justify-content:center;
+	      width:60px; height:60px;       /* circle diameter            */
+	      margin:0 8px;                  /* gap between circles        */
+	      border-radius:50%;
+	      background:#000;               /* black fill                 */
+	      text-decoration:none;
+	      transition:transform .2s, background .2s;
+	  }
+	  .social-icon i{                    /* icon glyph                 */
+	      color:#fff !important;         /* pure white                 */
+	      font-size:28px;
+	      line-height:60px;              /* perfect vertical centre    */
+	  }
+	  .social-icon:hover{
+	      transform:scale(1.1);
+	      background:#333;
+	  }
+
 	    .news{
 		border:1px solid #e5e5e5;
 		width:98%;
@@ -141,25 +154,26 @@
                 <a class="uk-flex uk-flex-center uk-width-1-1 uk-width-auto@m" href="#">
                     <div class="uk-width-1-2 uk-width-medium@s uk-visible@l">
                         <img class="uk-border-circle uk-responsive-height uk-responsive-width" src="profile_pic_v2.jpg" alt="Portrait" /> </br>
-			<!--  ⬇︎  social / contact icons  ⬇︎ -->
+			<!-- ▸ SOCIAL ICONS  -->
 			<div class="uk-flex uk-flex-center uk-margin-small-top">
-			  <a class="social-icon" href="mailto:mostafijur.rahman@utexas.edu" aria-label="Email">
-			      <i class="fas fa-envelope"></i>
+			  <a class="social-icon" href="mailto:mostafijur.rahman@utexas.edu"
+			     aria-label="Email">
+			     <i class="fas fa-envelope"></i>
 			  </a>
 			
 			  <a class="social-icon" href="https://scholar.google.com/citations?user=e0SzHPMAAAAJ"
 			     aria-label="Google Scholar" target="_blank">
-			      <i class="fas fa-graduation-cap"></i>   <!-- or custom SVG if preferred -->
+			     <i class="fas fa-graduation-cap"></i>  <!-- use scholar glyph if you have Pro; cap works in Free -->
 			  </a>
 			
 			  <a class="social-icon" href="https://github.com/mostafij-rahman"
 			     aria-label="GitHub" target="_blank">
-			      <i class="fab fa-github"></i>
+			     <i class="fab fa-github"></i>
 			  </a>
 			
 			  <a class="social-icon" href="https://www.linkedin.com/in/mostafij-rahman"
 			     aria-label="LinkedIn" target="_blank">
-			      <i class="fab fa-linkedin-in"></i>
+			     <i class="fab fa-linkedin-in"></i>
 			  </a>
 			</div>
 		    </div>
