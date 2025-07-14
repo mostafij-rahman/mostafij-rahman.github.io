@@ -21,40 +21,42 @@
                 border: 1px solid black;
                 padding: 0px 3px;
             }
-	    .news{
-		    border: 1px solid black;
-		    width: 98%;
-		    height: 700px;
-		    overflow-x: auto;
-		    overflow-y: auto;
-		    border-color: #e5e5e5;
-		    padding: 10px;
-		    background-color: #fff;
-		    border-radius: 4mm;
-		    
+	    .news {
+		border:1px solid #e5e5e5;
+		width:98%;
+		padding:10px;
+		background:#fff;
+		border-radius:4mm;
+		
+		/* kill the old scroll-box behaviour */
+		height:auto;          /* allow to grow */
+		max-height:none;
+		overflow:visible;
 	    }
-	     
-	    /* 1️⃣  Remove marker from the “Read more…” <li> only */
-	    .news li.read-more { list-style-type:none; margin-left:0; padding-left:0; }
-	
-	    /* make entire news list free of internal scrollbars  */
-	    .news           { overflow:visible;   }   /* top UL    */
-	    .news details   { overflow:visible;   }   /* disclosure */
-	
-	    /* style the summary like a text link, no system box  */
-	    .news summary {
-	        display:inline-block;             /* shrink to text width      */
-	        cursor:pointer;
-	        border:none; background:none;     /* kill default grey box     */
-	        color:#004fa3;                    /* link colour               */
-	        text-decoration:underline;
-	        outline:none;                     /* no blue focus border      */
-	        padding:0; margin:0;
+		
+	    /* -----------------------------------------------------------------
+	    ②  Remove bullet & indent from the “Read more …” line only
+	    ----------------------------------------------------------------- */
+	    .news li.read-more { list-style:none; margin:0; padding:0; }
+		
+	    /* -----------------------------------------------------------------
+	    ③  Summary looks like a link, no default triangle / blue box
+	    ----------------------------------------------------------------- */
+	    .news summary{
+	        display:inline-block;
+		cursor:pointer;
+		background:none; border:none; margin:0; padding:0;
+		color:#004fa3; text-decoration:underline; outline:none;
 	    }
-	    /* keep nested bullets flush with top-level bullets    */
-	    .news li.read-more details ul {
-	        margin:0;
-	        padding-left:1.4em;               /* same indent as uk-list-bullet */
+	    .news summary::-webkit-details-marker{display:none;}  /* Chrome / Safari */
+	    .news summary::marker{content:"";}                    /* Firefox          */
+		
+	    /* -----------------------------------------------------------------
+	    ④  Nested list inside <details>: bullets align with main list
+	    ----------------------------------------------------------------- */
+	    .news li.read-more details ul{
+		margin:0;
+		padding-left:1.4em;   /* same indent as uk-list-bullet bullets */
 	    }
 	    .uk-text-bold {
 		    font-weight: 600;
@@ -193,7 +195,7 @@
 	    	<li class="read-more">
 		<details>
   	    	    <summary style="cursor:pointer;">Read more…</summary>
-		    <ul class="uk-list uk-list-bullet uk-margin-small-bottom news">
+		    <ul class="uk-list uk-list-bullet uk-margin-small-bottom">
 			<li><b>December 2024:</b> 1 paper addressing robustness in 2D medical image segmentation (<a href = "https://arxiv.org/abs/2405.06166" style="color:#800000" target='_'>MDNet</a>) accepted to <b>ICASSP 2025</b>.</li>
 			<li><b>October 2024:</b> Our collaborative research with Dell Med on Biomedical imaging <b>featured in <a href = "https://news.utexas.edu/2024/10/17/ai-in-the-gi/" style="color:#800000" target='_'>UT News</b></a>.</li>
 			<li><b>October 2024:</b> 1 paper introducing computationally efficient vision model (<a href = "https://arxiv.org/abs/2412.10995" style="color:#800000" target='_'>RapidNet</a>) accepted to <b>WACV 2025</b>.</li>
