@@ -12,25 +12,25 @@ html {
     border: 1px solid black;
     padding: 0px 3px;
 }
-/* Increase the size of social icons */
+/* Further increase the size of social icons */
 .social-icon {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 120px; /* Further increased size */
-    height: 120px; /* Further increased size */
+    width: 140px; /* Increased size */
+    height: 140px; /* Increased size */
     margin: 0 8px;
     border-radius: 50%;
     color: #fff !important;
-    font-size: 50px; /* Further increased font size */
-    line-height: 120px; /* Adjusted for vertical alignment */
+    font-size: 60px; /* Increased font size */
+    line-height: 140px; /* Adjusted for vertical alignment */
     text-decoration: none;
     transition: transform .2s, background .2s;
 }
 .social-icon i {
     color: #fff !important;
-    font-size: 50px; /* Further increased font size */
-    line-height: 120px; /* Adjusted for vertical alignment */
+    font-size: 60px; /* Increased font size */
+    line-height: 140px; /* Adjusted for vertical alignment */
 }
 .social-icon:hover {
     transform: scale(1.1);
