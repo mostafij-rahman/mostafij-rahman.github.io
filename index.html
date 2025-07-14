@@ -32,14 +32,6 @@
 		    background-color: #fff;
 		    border-radius: 4mm;
 	    }
-	    /* hide everything past the N-th visible <li> when collapsed */
-	    .news li.hidden   { display:none; }
-	    .news.expanded li.hidden { display:list-item; } /* show when expanded */
-	
-	    /* look & feel of the toggle link */
-	    .news-toggle {
-	       cursor:pointer; color:#004fa3; text-decoration:underline;
-	    }
 	    .uk-text-bold {
 		    font-weight: 600;
 		}
@@ -57,16 +49,7 @@
 		    color: #800000;
 		}
         </style>
-	<!-- ==========  JavaScript  (tiny toggler)  ========== -->
-	<script>
-	  const list   = document.getElementById('newsList');
-	  const toggle = document.getElementById('newsToggle');
 	
-	  toggle.addEventListener('click', () => {
-	    const expanded = list.classList.toggle('expanded');   // add/remove class
-	    toggle.textContent = expanded ? 'Read less…' : 'Read more…';
-	  });
-	</script>
     </head>
     <body style="background-color: #FFFFFF">
         <nav class="uk-navbar-container uk-margin uk-light" style="background-color: #BF5701" uk-navbar>
@@ -182,31 +165,36 @@
 		<li><b>February 2025:</b> 1 paper addressing complutational complexity of 3D segmentation (<a href = "#" style="color:#800000" target='_'>EffiDec3D</a>) accepted to <b>CVPR 2025</b>.</li>
 		<li><b>February 2025:</b> Attended <b>UT System Trauma Research Symposium</b> 2025. </li>
 		<li><b>January 2025:</b> Presented a poster at <b>GAIN 2025</b> on "Efficient Multi-scale Convolutional Attention Decoding for Medical Image Segmentation". </li>
-		<li><b>December 2024:</b> 1 paper addressing robustness in 2D medical image segmentation (<a href = "https://arxiv.org/abs/2405.06166" style="color:#800000" target='_'>MDNet</a>) accepted to <b>ICASSP 2025</b>.</li>
-		<li><b>October 2024:</b> Our collaborative research with Dell Med on Biomedical imaging <b>featured in <a href = "https://news.utexas.edu/2024/10/17/ai-in-the-gi/" style="color:#800000" target='_'>UT News</b></a>.</li>
-		<li><b>October 2024:</b> 1 paper introducing computationally efficient vision model (<a href = "https://arxiv.org/abs/2412.10995" style="color:#800000" target='_'>RapidNet</a>) accepted to <b>WACV 2025</b>.</li>
-		<li><b>September 2024:</b> 1 abstract (Few-shot Image Denoising) accepted to <b>EPFL Latsis Symposium on Smart Microscopy 2024</b> from internship at NIH.</li>
-		<li><b>August 2024:</b> Invited Talk: Gave a talk at NHLBI, NIH on "Efiicient Deep Learning for Biomedical Imaging". </li>
-		<li><b>August 2024:</b> Presented a poster at NIH on "Universal Light Microscopy Denoising via Lightweight Multi-scale Convolutional Transformer".</li>
-		<li><b>July 2024:</b> Won 🏅 The <b>Texas Health Catalyst Award 2024</b> for our "Medical Image Segmentation via Cascaded Attention Decoding".</li>
-		<li><b>May 2024:</b> I have joined Office of AI Research (OAIR), NHLBI, NIH as 2024 <b>Summer IRTA Fellow</b> to work with Sarah Hopper and Christian Combs.</li> 
-		<li><b>April 2024:</b> 1 paper addressing the robustness of finetuning vision foundation model for polyp segmentation (<a href = "https://openaccess.thecvf.com/content/CVPR2024W/DEF-AI-MIA/html/Rahman_PP-SAM_Perturbed_Prompts_for_Robust_Adaption_of_Segment_Anything_Model_CVPRW_2024_paper.html" style="color:#800000">PP-SAM</a> || <a href = "https://github.com/SLDGroup/PP-SAM" style="color:#800000">[Code]</a>) accepted to <b>CVPRW 2024</b> on Domain adaptation Explainability and Fairness in AI for Medical Image Analysis.</li>
-		<li><b>March 2024:</b> Received the prestigious 🏅 <b>Summer IRTA Fellowship</b> from Office of AI Research (OAIR), NHLBI, NIH to work with Sarah Hopper, Christian Combs, and Hui Xue.</li> 
-		<li><b>February 2024:</b> 2 papers introducing efficient multi-scale convolutional attention-based decoder for 2D medical image segmentation (<a href = "https://openaccess.thecvf.com/content/CVPR2024/html/Rahman_EMCAD_Efficient_Multi-scale_Convolutional_Attention_Decoding_for_Medical_Image_Segmentation_CVPR_2024_paper.html" style="color:#800000">EMCAD</a> || <a href = "https://github.com/SLDGroup/EMCAD" style="color:#800000">[Code]</a>) and dynamic graph construction-based vision backbone (<a href = "https://openaccess.thecvf.com/content/CVPR2024/html/Munir_GreedyViG_Dynamic_Axial_Graph_Construction_for_Efficient_Vision_GNNs_CVPR_2024_paper.html" style="color:#800000">GreedyViG</a> || <a href = "https://github.com/SLDGroup/GreedyViG" style="color:#800000">[Code]</a>) accepted to <b>CVPR 2024</b>.</li>
-		<li><b>January 2024:</b> Presented a poster at <b>GAIN 2024</b> on "Efficient Cascaded Graph Convolutional Decoding for 2D Medical Image Segmentation". </li>
-		<li><b>August 2023:</b> 1 paper introducing a graph convolution-based decoder for 2D medical image segmentation (<a href = "https://openaccess.thecvf.com/content/WACV2024/html/Rahman_G-CASCADE_Efficient_Cascaded_Graph_Convolutional_Decoding_for_2D_Medical_Image_WACV_2024_paper.html" style="color:#800000">G-CASCADE</a>) accepted to <b>WACV 2024</b>.</li>
-		<li><b>July 2023:</b> Received 🏅 <b>Professional Development Award</b> by the Graduate School, UT Austin</li>
-		<li><b>May 2023:</b> Spending Summer 2023 in <b>Robert Bosch Research</b>, Pittsburgh as Machine Learning Reseach Intern.</li>
-		<li class="hidden"><b>April 2023:</b> Won the 🏅 <b>Ram’s Horn Best Project Award</b> in Digital Video course by <b>Prof. Alan Bovik</b>, UT Austin.</li>
-		<li class="hidden"><b>March 2023:</b> Received the 🏅 <b>Best Poster Award</b> (for CASCADE) by Graduate and Industry Networking (<b>GAIN 2023</b>), UT Austin.</li>
-		<li class="hidden"><b>March 2023:</b> Presented a poster at <b>GAIN 2023</b> on "Medical Image Segmentation via Cascaded Attention Decoding". </li>
-		<li class="hidden"><b>March 2023:</b> 1 paper introducing a multi-scale hierarchical network and combinatorial supervision (<a href = "https://proceedings.mlr.press/v227/rahman24a.html" style="color:#800000">MERIT</a>) accepted to <b>MIDL 2023</b>.</li>
-		<li class="hidden"><b>October 2022:</b> 1 paper introducing the first convolutational attention-based decoding (<a href = "https://openaccess.thecvf.com/content/WACV2023/html/Rahman_Medical_Image_Segmentation_via_Cascaded_Attention_Decoding_WACV_2023_paper.html" style="color:#800000">CASCADE</a>) accepted to <b>WACV 2023</b>.</li>
-            	<li class="hidden"><b>May 2022:</b> Received the 🏅 <b>Feldman Graduate Research Fellowship</b>, The University of Texas at Austin.</li>
-		<li class="hidden"><b>January 2022:</b> I have started the Doctor of Philospohy in Electrical and Computer Engineering, The University of Texas at Austin (UT Austin). I have joined the System Level Design Group (SLD) advised by Prof. Radu Marculescu.</li>
 	    </ul>
-	    <p><span id="newsToggle" class="news-toggle">Read more…</span></p>
-
+	    <!-- ▸ Older items wrapped in <details> so they stay collapsed     -->
+	    <details>
+  	    	<summary style="cursor:pointer;">Read more…</summary>
+		<ul class="uk-list uk-list-bullet uk-margin-small-bottom news">
+			<li><b>December 2024:</b> 1 paper addressing robustness in 2D medical image segmentation (<a href = "https://arxiv.org/abs/2405.06166" style="color:#800000" target='_'>MDNet</a>) accepted to <b>ICASSP 2025</b>.</li>
+			<li><b>October 2024:</b> Our collaborative research with Dell Med on Biomedical imaging <b>featured in <a href = "https://news.utexas.edu/2024/10/17/ai-in-the-gi/" style="color:#800000" target='_'>UT News</b></a>.</li>
+			<li><b>October 2024:</b> 1 paper introducing computationally efficient vision model (<a href = "https://arxiv.org/abs/2412.10995" style="color:#800000" target='_'>RapidNet</a>) accepted to <b>WACV 2025</b>.</li>
+			<li><b>September 2024:</b> 1 abstract (Few-shot Image Denoising) accepted to <b>EPFL Latsis Symposium on Smart Microscopy 2024</b> from internship at NIH.</li>
+			<li><b>August 2024:</b> Invited Talk: Gave a talk at NHLBI, NIH on "Efiicient Deep Learning for Biomedical Imaging". </li>
+			<li><b>August 2024:</b> Presented a poster at NIH on "Universal Light Microscopy Denoising via Lightweight Multi-scale Convolutional Transformer".</li>
+			<li><b>July 2024:</b> Won 🏅 The <b>Texas Health Catalyst Award 2024</b> for our "Medical Image Segmentation via Cascaded Attention Decoding".</li>
+			<li><b>May 2024:</b> I have joined Office of AI Research (OAIR), NHLBI, NIH as 2024 <b>Summer IRTA Fellow</b> to work with Sarah Hopper and Christian Combs.</li> 
+			<li><b>April 2024:</b> 1 paper addressing the robustness of finetuning vision foundation model for polyp segmentation (<a href = "https://openaccess.thecvf.com/content/CVPR2024W/DEF-AI-MIA/html/Rahman_PP-SAM_Perturbed_Prompts_for_Robust_Adaption_of_Segment_Anything_Model_CVPRW_2024_paper.html" style="color:#800000">PP-SAM</a> || <a href = "https://github.com/SLDGroup/PP-SAM" style="color:#800000">[Code]</a>) accepted to <b>CVPRW 2024</b> on Domain adaptation Explainability and Fairness in AI for Medical Image Analysis.</li>
+			<li><b>March 2024:</b> Received the prestigious 🏅 <b>Summer IRTA Fellowship</b> from Office of AI Research (OAIR), NHLBI, NIH to work with Sarah Hopper, Christian Combs, and Hui Xue.</li> 
+			<li><b>February 2024:</b> 2 papers introducing efficient multi-scale convolutional attention-based decoder for 2D medical image segmentation (<a href = "https://openaccess.thecvf.com/content/CVPR2024/html/Rahman_EMCAD_Efficient_Multi-scale_Convolutional_Attention_Decoding_for_Medical_Image_Segmentation_CVPR_2024_paper.html" style="color:#800000">EMCAD</a> || <a href = "https://github.com/SLDGroup/EMCAD" style="color:#800000">[Code]</a>) and dynamic graph construction-based vision backbone (<a href = "https://openaccess.thecvf.com/content/CVPR2024/html/Munir_GreedyViG_Dynamic_Axial_Graph_Construction_for_Efficient_Vision_GNNs_CVPR_2024_paper.html" style="color:#800000">GreedyViG</a> || <a href = "https://github.com/SLDGroup/GreedyViG" style="color:#800000">[Code]</a>) accepted to <b>CVPR 2024</b>.</li>
+			<li><b>January 2024:</b> Presented a poster at <b>GAIN 2024</b> on "Efficient Cascaded Graph Convolutional Decoding for 2D Medical Image Segmentation". </li>
+			<li><b>August 2023:</b> 1 paper introducing a graph convolution-based decoder for 2D medical image segmentation (<a href = "https://openaccess.thecvf.com/content/WACV2024/html/Rahman_G-CASCADE_Efficient_Cascaded_Graph_Convolutional_Decoding_for_2D_Medical_Image_WACV_2024_paper.html" style="color:#800000">G-CASCADE</a>) accepted to <b>WACV 2024</b>.</li>
+			<li><b>July 2023:</b> Received 🏅 <b>Professional Development Award</b> by the Graduate School, UT Austin</li>
+			<li><b>May 2023:</b> Spending Summer 2023 in <b>Robert Bosch Research</b>, Pittsburgh as Machine Learning Reseach Intern.</li>
+			<li><b>April 2023:</b> Won the 🏅 <b>Ram’s Horn Best Project Award</b> in Digital Video course by <b>Prof. Alan Bovik</b>, UT Austin.</li>
+			<li><b>March 2023:</b> Received the 🏅 <b>Best Poster Award</b> (for CASCADE) by Graduate and Industry Networking (<b>GAIN 2023</b>), UT Austin.</li>
+			<li><b>March 2023:</b> Presented a poster at <b>GAIN 2023</b> on "Medical Image Segmentation via Cascaded Attention Decoding". </li>
+			<li><b>March 2023:</b> 1 paper introducing a multi-scale hierarchical network and combinatorial supervision (<a href = "https://proceedings.mlr.press/v227/rahman24a.html" style="color:#800000">MERIT</a>) accepted to <b>MIDL 2023</b>.</li>
+			<li><b>October 2022:</b> 1 paper introducing the first convolutational attention-based decoding (<a href = "https://openaccess.thecvf.com/content/WACV2023/html/Rahman_Medical_Image_Segmentation_via_Cascaded_Attention_Decoding_WACV_2023_paper.html" style="color:#800000">CASCADE</a>) accepted to <b>WACV 2023</b>.</li>
+	            	<li><b>May 2022:</b> Received the 🏅 <b>Feldman Graduate Research Fellowship</b>, The University of Texas at Austin.</li>
+			<li><b>January 2022:</b> I have started the Doctor of Philospohy in Electrical and Computer Engineering, The University of Texas at Austin (UT Austin). I have joined the System Level Design Group (SLD) advised by Prof. Radu Marculescu.</li>
+	    	</ul>
+	    </details>
+		
             <p id="research" class="uk-h2 uk-text-bold">Selected Publication
 		    [<b><a href = "https://scholar.google.com/citations?user=e0SzHPMAAAAJ" style="color:#FF4422;">Full List</a></b>]</p>
             <ul class="uk-list uk-margin-small-bottom">
