@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -8,113 +7,14 @@
 
         <!-- UIkit CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/css/uikit.min.css" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-dRw8fVWV02OQjR9K41p7xYecvDL3DKCT0MwK8OjtMZ3yT2zwj0g5sd7eDE7+GcfF3KmqbE+boNB8Lt1Fad2w==" crossorigin="anonymous" referrerpolicy="no-referrer">
-
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="stylesheet" href="style.css"> <!-- Added link to external stylesheet -->
         <!-- UIkit JS -->
         <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/js/uikit.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/js/uikit-icons.min.js"></script>
-
-        <style>
-	    /* Make every element inherit from <html>, then set <html> to pure black */
-  	    *{color:inherit;}          /* reset any default element colors  */
-  	    html{color:#000;}             /* 0,0,0 → true black }*/
-            .uk-label{
-                color: black;
-                text-transform: none;
-                background-color: transparent;
-                border: 1px solid black;
-                padding: 0px 3px;
-            }
-	    /*───────── SOCIAL CIRCLES ─────────*/
-	  .social-icon{
-	      display:inline-flex;           /* center the glyph           */
-	      align-items:center;
-	      justify-content:center;
-	      width:60px; height:60px;       /* circle diameter            */
-	      margin:0 8px;                  /* gap between circles        */
-	      border-radius:50%;
-	      background:#000;               /* black fill                 */
-	      text-decoration:none;
-	      transition:transform .2s, background .2s;
-	  }
-	  .social-icon i{                    /* icon glyph                 */
-	      color:#fff !important;         /* pure white                 */
-	      font-size:28px;
-	      line-height:60px;              /* perfect vertical centre    */
-	  }
-	  .social-icon:hover{
-	      transform:scale(1.1);
-	      background:#333;
-	  }
-
-	    .news{
-		border:1px solid #e5e5e5;
-		width:98%;
-		padding:10px;
-		background:#fff;
-		border-radius:4mm;
-		
-		/* kill the old scroll-box behaviour */
-		height:auto;          /* allow to grow */
-		max-height:none;
-		overflow:visible;
-	    }
-		
-	    /* -----------------------------------------------------------------
-	    ②  Remove bullet & indent from the “Read more …” line only
-	    ----------------------------------------------------------------- */
-	    .news li.read-more{ list-style:none; margin:0; padding:0; }
-	    /* no ordinary bullet */
-	    .news li.read-more{
-            	list-style:none;         /* kills default disc               */
-    		margin:0; padding:0;
-	    }
-
-	    /* no custom UIkit bullet */
-    	    .news li.read-more::before{  /* UIkit injects this dot •         */
-    		content:none !important; /* override uk-list-bullet rule      */
-	    }
-		
-	    /* -----------------------------------------------------------------
-	    ③  Summary looks like a link, no default triangle / blue box
-	    ----------------------------------------------------------------- */
-	    .news summary{
-	        display:inline-block;
-		cursor:pointer;
-		background:none; border:none; margin:0; padding:0;
-		color:#004fa3; text-decoration:underline; outline:none;
-	    }
-	    .news summary::-webkit-details-marker{display:none;}  /* Chrome / Safari */
-	    .news summary::marker{content:"";}                    /* Firefox          */
-		
-	    /* -----------------------------------------------------------------
-	    ④  Nested list inside <details>: bullets align with main list
-	    ----------------------------------------------------------------- */
-	    .news li.read-more details ul{
-		margin:0;
-		padding-left:1.4em;   /* same indent as uk-list-bullet bullets */
-	    }
-	    .uk-text-bold {
-		    font-weight: 600;
-		}
-	    .uk-h2, h2 {
-		    font-size: 1.5rem;
-		}
-	    .uk-text-lead {
-		    font-size: 1.0rem;
-		    line-height: 1.5;
-		    color: #333;
-		}
-	   .uk-text-lead {
-		    font-size: 1.0rem;
-		    line-height: 1.5;
-		    color: #800000;
-		}
-        </style>
-	
     </head>
-    <body style="background-color: #FFFFFF">
-        <nav class="uk-navbar-container uk-margin uk-light" style="background-color: #BF5701" uk-navbar>
+    <body>
+        <nav class="uk-navbar-container uk-margin uk-light" uk-navbar>
             <div class="uk-navbar-left">
                 <a class="uk-navbar-item uk-logo uk-text-primary" href="index.html">Md Mostafijur Rahman's Homepage</a>
             </div>
@@ -154,28 +54,23 @@
                 <a class="uk-flex uk-flex-center uk-width-1-1 uk-width-auto@m" href="#">
                     <div class="uk-width-1-2 uk-width-medium@s uk-visible@l">
                         <img class="uk-border-circle uk-responsive-height uk-responsive-width" src="profile_pic_v2.jpg" alt="Portrait" /> </br>
-			<!-- ▸ SOCIAL ICONS  -->
-			<div class="uk-flex uk-flex-center uk-margin-small-top">
-			  <a class="social-icon" href="mailto:mostafijur.rahman@utexas.edu"
-			     aria-label="Email">
-			     <i class="fas fa-envelope"></i>
-			  </a>
-			
-			  <a class="social-icon" href="https://scholar.google.com/citations?user=e0SzHPMAAAAJ"
-			     aria-label="Google Scholar" target="_blank">
-			     <i class="fas fa-graduation-cap"></i>  <!-- use scholar glyph if you have Pro; cap works in Free -->
-			  </a>
-			
-			  <a class="social-icon" href="https://github.com/mostafij-rahman"
-			     aria-label="GitHub" target="_blank">
-			     <i class="fab fa-github"></i>
-			  </a>
-			
-			  <a class="social-icon" href="https://www.linkedin.com/in/mostafij-rahman"
-			     aria-label="LinkedIn" target="_blank">
-			     <i class="fab fa-linkedin-in"></i>
-			  </a>
-			</div>
+				<!-- ▸ SOCIAL ICONS  -->
+				<div class="uk-flex uk-flex-center uk-margin-small-top">
+					
+					<a href="mailto:mostafijur.rahman@utexas.edu" class="uk-margin-small-right" aria-label="Email">
+						<i class="fas fa-envelope"></i>
+					</a>
+				
+					<a href="https://scholar.google.com/citations?user=e0SzHPMAAAAJ" class="uk-margin-small-right" aria-label="Google Scholar" target="_blank">
+						<i class="fas fa-graduation-cap"></i>
+					</a>
+					<a href="https://github.com/mostafij-rahman" class="uk-margin-small-right" aria-label="GitHub" target="_blank">
+						<i class="fab fa-github"></i>
+					</a>
+					<a href="https://www.linkedin.com/in/mostafij-rahman" class="uk-margin-small-right" aria-label="LinkedIn" target="_blank">
+						<i class="fab fa-linkedin-in"></i>
+					</a>
+				</div> 
 		    </div>
 		</a>
 
@@ -208,21 +103,20 @@
                         <a href="https://www.linkedin.com/in/mostafij-rahman/" class="uk-button uk-button-default uk-margin-small-right" target='_'> LinkedIn </a>
 			<a href="https://utexas.box.com/s/f93s0hfwhyxsbit74edl01ejw7o049of" class="uk-button uk-button-default uk-margin-small-right" target='_'> Resume/CV </a>
                     </div>-->
-		    <div class="uk-margin-horizontal uk-flex uk-flex-center uk-visible@m">
+		    <!--<div class="uk-margin-horizontal uk-flex uk-flex-center uk-visible@m">
                         <a href="#contact" class="uk-button uk-button-default uk-margin-small-right" uk-icon="mail"></a>
                         <a href="https://scholar.google.com/citations?user=e0SzHPMAAAAJ" class="uk-button uk-button-default uk-margin-small-right" uk-icon="google" target='_'></a>
                         <a href="https://github.com/mostafij-rahman" class="uk-button uk-button-default uk-margin-small-right" uk-icon="github" target='_'></a>
                         <a href="https://www.linkedin.com/in/mostafij-rahman/" class="uk-button uk-button-default uk-margin-small-right" uk-icon="linkedin" target='_'></a>
-                    	<!--<a href="https://utexas.box.com/s/f93s0hfwhyxsbit74edl01ejw7o049of" class="uk-button uk-button-default uk-margin-small-right" target='_'> Resume/CV </a>-->
-                    </div>
+                    </div>-->
                     <!-- Buttons for mobile device -->
-                    <div class="uk-margin-horizontal uk-flex uk-flex-center uk-hidden@m">
+                    <!--<div class="uk-margin-horizontal uk-flex uk-flex-center uk-hidden@m">
                         <a href="#contact" class="uk-button uk-button-default uk-margin-small-right" uk-icon="mail"></a>
                         <a href="https://scholar.google.com/citations?user=e0SzHPMAAAAJ" class="uk-button uk-button-default uk-margin-small-right" uk-icon="google" target='_'></a>
                         <a href="https://github.com/mostafij-rahman" class="uk-button uk-button-default uk-margin-small-right" uk-icon="github" target='_'></a>
                         <a href="https://www.linkedin.com/in/mostafij-rahman/" class="uk-button uk-button-default uk-margin-small-right" uk-icon="linkedin" target='_'></a>
 			<a href="https://utexas.box.com/s/f93s0hfwhyxsbit74edl01ejw7o049of" class="uk-button uk-button-default uk-margin-small-right" target='_'></a>
-                    </div>
+                    </div>-->
                 </div>
             </div>
         </div>
@@ -326,7 +220,7 @@
                     <a href="#" target="_blank" class="uk-button uk-button-text">[Code]</a>
                 </li>
 		
-		<li>
+		<li></li>
                     <div class="uk-text-lead"><span style="color:#e60000; font-weight:bold;">New:</span>&nbsp; <span style="color:#b30749"><b>[MIDL 2025]</b></span> &nbsp;  Training-Free Dataset Pruning for Polyp Segmentation via Community Detection in Similarity Networks.</div>
                     <div> <b>Md Mostafijur Rahman</b>, Radu Marculescu. </div>
                     <div class="uk-text-lead"></div>
@@ -546,89 +440,4 @@
 
     </body>
 </html>
-
-
-<!-- 		<div class="blurb" style="font-family: Arial, Helvetica, sans-serif;">
-			<div style="width:750px; height:400px;  float:right; margin-top:20px;">
-				<p style="font-size:20px;display: inline-block;">I am a Ph.D. student at the 
-					<a href = "https://www.ischool.utexas.edu/" style="color:#800000">
-					School of Information, UT Austin</a>. I am fortunate to be advised by 
-					<b><a href = "https://yingding.ischool.utexas.edu/" style="color:#800000">Prof. Ying Ding</a></b>, and 
-					<b><a href = "https://www.ece.utexas.edu/people/faculty/atlas-wang" style="color:#800000">Prof. Atlas Wang</b>.</a> I am a member of 
-					<b>Visual Informatics Group
-					<a href = "https://vita-group.github.io/" style="color:#800000">(VITA)</a> @UT Austin</b>. 
-					My primary research revolves around Multi-Modal Systems, Model Interpretability and Optimization. I am currently working on 
-					designing and improving explainability of the
-					training recipe for Sparse Neural Networks. I am also developing AI algorithms 
-					across computer vision, natural language processing which assists in critical medical decision-making.</p>
-
-				<p style="font-size:20px;display: inline-block;">Prior to joining UT Austin, I completed my Masters in Computer Science from 
-					<a href = "http://www.iitkgp.ac.in/" style="color:#800000">Indian Institute of Technology, Kharagpur</a>. 
-					I was advised by 
-					<a href = "https://cse.iitkgp.ac.in/~animeshm/" style="color:#800000">Prof. Animesh Mukherjee</a> and 
-					<a href = "https://cse.iitkgp.ac.in/~pawang/" style="color:#800000">Prof. Pawan Goyal</a> at the CNeRG Lab. I have also worked as Lead Research Engineer 
-					at Advanced Technology Lab, Samsung Electronics, India under the supervision of
-					<a href="https://scholar.google.com/citations?hl=en&user=E6Gasu0AAAAJ&view_op=list_works&sortby=pubdate" style="color:#800000">Dr. Vijay Narayan Tiwari</a>.</p>
-				<p style="font-size:20px;display: inline-block; color:red"><i>Somewhere, something incredible is waiting to be known.</i> ~Prof. Carl Sagan</p>
-			</div>
-			<img src="/picturedp.PNG" alt="Italian Trulli" style="width:200px;height:200px;">
-			<h3>Md Mostafijur Rahman</h3>
-			<p>PhD Student - UT Austin</p>
-			<p>School of Information</p>
-			<p style="font-size:12px">Office: UTA 5.410, 1616 Guadalupe St</p>
-			<ul>
-				   <li><a href="mailto:ajayjaiswal@utexas.edu">Email</a></li>
-				   <li><a href="https://scholar.google.com/citations?user=I783HxYAAAAJ&hl=en">Google Scholar</a></li>
-			</ul>
-		</div> 
-		<h2 style = "font-size:20px">News Updates</h2>
-		<hr/>
-		<div style ="font-size:14px; font-family: Arial, Helvetica, sans-serif;">
-			<strong>May, 2022</strong> &emsp;Our work - 'Training Your Sparse Neural Network Better with Any Mask' got accpeted at <a href = "https://icml.cc/Conferences/2022/CallForPapers" style="color:#800000">ICML 2022</a>.</br>
-			<strong>Feb, 2022</strong> &emsp; Awarded Professoional Development Award by School of Information, UT Austin </br> 
-			<strong>Aug, 2021</strong> &emsp;Our work - 'SCALP - Supervised Contrastive Learning for Cardiopulmonary Disease Classification and Localization in Chest X-rays using Patient Metadata' got accpeted at <a href = "https://icdm2021.auckland.ac.nz/" style="color:#800000">ICDM 2021</a>.</br>
-			<strong>JuL, 2021</strong> &emsp;Winner of the <a href = "https://aihealth.ischool.utexas.edu/AIHealthChallenge/index.html" style="color:#800000">AI Health Data Challenge</a> at UT Austin. (First Prize - $1000)</br>
-			<strong>Jun, 2021</strong> &emsp;Our work - 'Using Radiomics as Prior Knowledge for Thorax Disease Classification and Localization in Chest X-rays' got accpeted at AMIA 2021.</br>
-			<strong>Jun, 2021</strong> &emsp;Started Working as Graduate Research Assistant with <a href = "http://www.katrinerk.com/" style="color:#800000"> Prof. Katrin Erk </a> on Narrative Inference. </br>
-			<strong>Mar, 2021</strong> &emsp;Presented our paper "Understanding Parachuting Collaboration" at iConference 2021.</br>
-			<strong>Jan, 2021</strong> &emsp;Started PhD in Information Science at University of Texas at Austin</br>
-			<strong>Jan, 2021</strong> &emsp;Receipent of Kilgarlin Fellowship ($2,500/semester - 2021 to 2024)</br>
-			<strong>Jan, 2021</strong> &emsp;Receipent of William and Margaret Kilgarlin Endowed Scholarship ($54,750 - 2021 to 2022)</br>
-			<strong>Dec, 2020</strong> &emsp;Left job at Advanced Technology Lab, Samsung Electronics, Banglore, India.</br>
-			<strong>Feb, 2020</strong> &emsp;Our submitted systems ranked 2nd, and 3rd place for Task 4, and 11 at 
-						<a href = "https://alt.qcri.org/semeval2020/index.php?id=tasks" style="color:#800000">SemEval 2020</a>.</br>
-		</div>
-		<h2 style = "font-size:16px">Select Publications (*Equal Contribution)</h2>
-		<hr/>
-		<div style ="font-size:14px; font-family: Arial, Helvetica, sans-serif;">
-			<p><strong>Training Your Sparse Neural Network Better with Any Mask</strong><br/>
-			<u>Md Mostafijur Rahman</u>, Haoyu Ma, Tianlong Chen, Ying Ding, Ying Ding, Atlas Wang<br/>
-		        International Conference on Machine Learning (ICML), 2022. 
-			</p>
-			<p><strong>RadBERT-CL: Factually-Aware Contrastive Learning ForRadiology Report Classification</strong><br/>
-			<u>Md Mostafijur Rahman</u>, Liyan Tang, Meheli Ghosh, Justin Rousseau, Yifan Peng, and Ying Ding<br/>
-		        2021 Machine Learning for Health (ML4H 2021)
-			</p>
-			<p><strong>Using Radiomics as Prior Knowledge for Abnormality Classification and Localization in Chest X-rays</strong><br/>
-			Yan Han, Chongyan Chen, Liyan Tang, Mingquan Lin, <u>Md Mostafijur Rahman</u>, Ying Ding, Yifan Peng<br/>
-		        2021 American Medical Informatics Association Annual Symposium 
-			</p>
-			<p><strong>Understanding Parachuting Collaboration</strong><br/>
-			<u>Md Mostafijur Rahman</u>, Meijun Liu, Ying Ding<br/>
-		        2021 Diversity, Divergence, Dialogue: 16th International Conference, iConference 
-			</p>
-			<p><strong>Ensemble Architecture for Fine-Tuned Propaganda Detection in News Articles</strong><br/>
-			Mayank Raj*, <u>Md Mostafijur Rahman</u>*, RR Rohit, Ankita Gupta, Sudeep Kumar Sahoo, Vertika Srivastava, Yeon Hyang Kim<br/>
-			2020 Proceedings of the Fourteenth Workshop on Semantic Evaluation, 1802-1807
-			</p>
-			<p><strong>Be Reasonable: Exploiting Large-scale Language Models for Commonsense Reasoning</strong><br/>
-			Vertika Srivastava, Sudeep Kumar Sahoo, Yeon Hyang Kim, Rohit Rr, Mayank Raj, <u>Md Mostafijur Rahman</u><br/>
-			2020 Proceedings of the Fourteenth Workshop on Semantic Evaluation, 585-593
-			</p>
-			<p><strong>Understanding the impact of early citers on long-term scientific impact</strong><br/>
-			Mayank Singh, <u>Md Mostafijur Rahman</u>, Priya Shree, Arindam Pal, Animesh Mukherjee, Pawan Goyal<br/>
-			2017 ACM/IEEE Joint Conference on Digital Libraries (JCDL)
-			</p>
-		</div>
- -->
 
