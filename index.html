@@ -8,6 +8,7 @@
 
         <!-- UIkit CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/css/uikit.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-SzlrxWriC3x1e+3FihJTOFhKM1VUo0rMj47eGm5j1mBkB+Y4DStK1jgVf21H9dm1Vd2NDFFSX5Q5x43Y1g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
         <!-- UIkit JS -->
         <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/js/uikit.min.js"></script>
@@ -15,8 +16,8 @@
 
         <style>
 	    /* Make every element inherit from <html>, then set <html> to pure black */
-  	    *{ color:inherit; }          /* reset any default element colors  */
-  	    html{ color:#000; }             /* 0,0,0 → true black                }
+  	    *{color:inherit;}          /* reset any default element colors  */
+  	    html{color:#000;}             /* 0,0,0 → true black }*/
             .uk-label{
                 color: black;
                 text-transform: none;
@@ -24,6 +25,24 @@
                 border: 1px solid black;
                 padding: 0px 3px;
             }
+	    /* circular black icons */
+	    .social-icon{
+	        display:inline-flex;            /* center the <i> */
+	        align-items:center;
+	        justify-content:center;
+	        width:60px; height:60px;        /* diameter */
+	        margin:0 8px;                   /* gap between circles */
+	        border-radius:50%;
+	        background:#000;                /* black fill */
+	        color:#fff;                     /* white glyph */
+	        font-size:28px;                 /* icon size */
+	        text-decoration:none;           /* kill underline */
+	        transition:transform .2s, background .2s;
+	    }
+	    .social-icon:hover{
+	  	transform:scale(1.1);
+	        background:#333;
+	    }
 	    .news{
 		border:1px solid #e5e5e5;
 		width:98%;
@@ -131,6 +150,29 @@
                 <a class="uk-flex uk-flex-center uk-width-1-1 uk-width-auto@m" href="#">
                     <div class="uk-width-1-2 uk-width-medium@s uk-visible@l">
                         <img class="uk-border-circle uk-responsive-height uk-responsive-width" src="profile_pic_v2.jpg" alt="Portrait" /> </br>
+			<!--  ⬇︎  social / contact icons  ⬇︎ -->
+			<div class="uk-flex uk-flex-center uk-margin-small-top">
+			  <a href="mailto:mostafijur.rahman@utexas.edu"
+			     class="social-icon" aria-label="Email">
+			     <i class="fa-solid fa-envelope"></i>
+			  </a>
+			
+			  <a href="https://scholar.google.com/citations?user=e0SzHPMAAAAJ"
+			     class="social-icon" aria-label="Google Scholar" target="_blank">
+			     <i class="fa-brands fa-google-scholar"></i>
+			     <!-- if the free kit lacks this glyph, see note below -->
+			  </a>
+			
+			  <a href="https://github.com/mostafij-rahman"
+			     class="social-icon" aria-label="GitHub" target="_blank">
+			     <i class="fa-brands fa-github"></i>
+			  </a>
+			
+			  <a href="https://www.linkedin.com/in/mostafij-rahman"
+			     class="social-icon" aria-label="LinkedIn" target="_blank">
+			     <i class="fa-brands fa-linkedin-in"></i>
+			  </a>
+			</div>
 		    </div>
 		</a>
 
@@ -188,7 +230,7 @@
 
             <p id="news" class="uk-h2 uk-text-bold">News</p>
             <ul class="uk-list uk-list-bullet uk-margin-small-bottom news">
-		<li><span style="color:#e60000; font-weight:bold;">New:</span>&nbsp; <b>July 2025:</b> 1 paper introducing ultra-lightweight 2D CNN-based segmentation architecture (<a href = "#" style="color:#800000" target='_'>MK-UNet</a>) accepted to <b>ICCVW 2025</b> as an Oral.</li>
+		<li><span style="color:#e60000; font-weight:bold;">New:</span>&nbsp; <b>July 2025:</b> 1 paper introducing ultra-lightweight 2D CNN-based segmentation architecture (<a href = "#" style="color:#800000" target='_'>MK-UNet</a>) accepted to <b>ICCVW 2025</b> as an <b>Oral</b>.</li>
 		<li><span style="color:#e60000; font-weight:bold;">New:</span>&nbsp; <b>July 2025:</b> Attended <b>MIDL 2025</b> and delivered an <b>Oral talk</b> on our paper, <a href = "https://openreview.net/pdf?id=VQX4B2A2Y0" style="color:#800000" target='_'>PRIME</a>, on data efficient AI</li>
 		<li><span style="color:#e60000; font-weight:bold;">New:</span>&nbsp; <b>July 2025:</b> Received the 🏅 <b>MIDL 2025 Travel Award</b> to attend and present <a href = "https://openreview.net/pdf?id=VQX4B2A2Y0" style="color:#800000" target='_'>PRIME</a> in Salt Lake City.</li>
 		<li><span style="color:#e60000; font-weight:bold;">New:</span>&nbsp; <b>July 2025:</b> Received the 🏅 <b>MICCAI 2025 NIH Registration Grant</b> to attend and present <a href = "#" style="color:#800000" target='_'>EfficientMedNeXt</a> in Daejeon, with support for main conference and satellite registrations, plus MICCAI Society membership.</li>
@@ -201,7 +243,7 @@
 		<li><b>April 2025:</b> Invited Talk on "Towards Efficient AI for Biomedical Imaging: Reducing Computation and Data Demands" at <a href = "https://stanford-medai.github.io/" style="color:#800000" target='_'><b>Stanford MedAI</b></a>.  <a href = "https://www.youtube.com/watch?v=HsqIxvm8Sdw" style="color:#800000" target='_'>Watch Recording</a>.</li>
 		<li><b>April 2025:</b> Our efficient 3D segmentation paper (<a href = "https://openaccess.thecvf.com/content/CVPR2025/html/Rahman_EffiDec3D_An_Optimized_Decoder_for_High-Performance_and_Efficient_3D_Medical_CVPR_2025_paper.html" style="color:#800000" target='_'>EffiDec3D</a>) received the 🏅 <b>Highlight award at CVPR 2025 (top 2.98% of submissions)</b>.</li>
 		<li><b>March 2025:</b> 1 paper introducing data-driven architecture (<a href = "https://openaccess.thecvf.com/content/CVPR2025W/eLVM/html/Munir_From_Data_to_Design_Leveraging_Frequency_Statistics_for_Efficient_Neural_CVPRW_2025_paper.html" style="color:#800000" target='_'>From Data to Design</a>) accepted to <b>CVPRW 2025</b> on Efficient Large Vision Models.</li>
-		<li><b>March 2025:</b> 1 paper addressing data inefficiency by applying community detection in image similarity network (<a href = "https://openreview.net/pdf?id=VQX4B2A2Y0" style="color:#800000" target='_'>PRIME</a>) accepted to <b>MIDL 2025</b>.</li>
+		<li><b>March 2025:</b> 1 paper addressing data inefficiency by applying community detection in image similarity network (<a href = "https://openreview.net/pdf?id=VQX4B2A2Y0" style="color:#800000" target='_'>PRIME</a>) accepted to <b>MIDL 2025</b> as <b>Oral</b>.</li>
 		<li><b>February 2025:</b> 1 paper addressing complutational complexity of 3D segmentation (<a href = "#" style="color:#800000" target='_'>EffiDec3D</a>) accepted to <b>CVPR 2025</b>.</li>
 		<li><b>February 2025:</b> Attended <b>UT System Trauma Research Symposium</b> 2025. </li>
 		<li><b>January 2025:</b> Presented a poster at <b>GAIN 2025</b> on "Efficient Multi-scale Convolutional Attention Decoding for Medical Image Segmentation". </li>
@@ -271,7 +313,7 @@
                     <div class="uk-text-lead"></div>
 		    <a href="https://openaccess.thecvf.com/content/CVPR2025/html/Rahman_EffiDec3D_An_Optimized_Decoder_for_High-Performance_and_Efficient_3D_Medical_CVPR_2025_paper.html" target="_blank" class="uk-button uk-button-text">[Paper]</a>
                     <a href="https://github.com/SLDGroup/EffiDec3D" target="_blank" class="uk-button uk-button-text">[Code]</a>
-		    <span style="background-color: lightgreen; padding: 2px 5px; border-radius: 5px;">Highlight 🏅</span>
+		    <span style="background-color: red; padding: 2px 5px; border-radius: 5px;">Highlight 🏅</span>
                 </li>
 		<li>
                     <div class="uk-text-lead"><span style="color:#e60000; font-weight:bold;">New:</span>&nbsp; <span style="color:#b30749"><b>[CVPRW 2025]</b></span> &nbsp;  From Data to Design: Leveraging Frequency Statistics for Efficient Neural Network Architectures.</div>
@@ -287,7 +329,7 @@
                     <div class="uk-text-lead"></div>
 		    <a href="https://openreview.net/pdf?id=VQX4B2A2Y0" target="_blank" class="uk-button uk-button-text">[Paper]</a>
                     <a href="#" target="_blank" class="uk-button uk-button-text">[Code]</a>
-			<span style="background-color: lightgreen; padding: 2px 5px; border-radius: 5px;">Oral</span>
+			<span style="background-color: red; padding: 2px 5px; border-radius: 5px;">Oral</span>
                 </li>
 
 		<li>
