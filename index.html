@@ -21,7 +21,7 @@
                 border: 1px solid black;
                 padding: 0px 3px;
             }
-	    .news {
+	    .news{
 		border:1px solid #e5e5e5;
 		width:98%;
 		padding:10px;
@@ -37,7 +37,17 @@
 	    /* -----------------------------------------------------------------
 	    ②  Remove bullet & indent from the “Read more …” line only
 	    ----------------------------------------------------------------- */
-	    .news li.read-more { list-style:none; margin:0; padding:0; }
+	    .news li.read-more{ list-style:none; margin:0; padding:0; }
+	    /* no ordinary bullet */
+	    .news li.read-more{
+            	list-style:none;         /* kills default disc               */
+    		margin:0; padding:0;
+	    }
+
+	    /* no custom UIkit bullet */
+    	    .news li.read-more::before{  /* UIkit injects this dot •         */
+    		content:none !important; /* override uk-list-bullet rule      */
+	    }
 		
 	    /* -----------------------------------------------------------------
 	    ③  Summary looks like a link, no default triangle / blue box
