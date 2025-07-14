@@ -8,7 +8,7 @@
 
         <!-- UIkit CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/css/uikit.min.css" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-SzlrxWriC3x1e+3FihJTOFhKM1VUo0rMj47eGm5j1mBkB+Y4DStK1jgVf21H9dm1Vd2NDFFSX5Q5x43Y1g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-dRw8fVWV02OQjR9K41p7xYecvDL3DKCT0MwK8OjtMZ3yT2zwj0g5sd7eDE7+GcfF3KmqbE+boNB8Lt1Fad2w==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
         <!-- UIkit JS -->
         <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/js/uikit.min.js"></script>
@@ -42,6 +42,15 @@
 	    .social-icon:hover{
 	  	transform:scale(1.1);
 	        background:#333;
+	    }
+	    .social-icon{
+	    	/* your existing circle styles ... */
+	    	background:#000;
+	    }
+	    .social-icon i{         /* <- glyph itself */
+		color:#fff !important;
+	    	font-size:28px;     /* same size as before */
+	    	line-height:60px;   /* vertically center */
 	    }
 	    .news{
 		border:1px solid #e5e5e5;
