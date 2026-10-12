@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Md Mostafijur Rahman</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Md Mostafijur Rahman, Assistant Professor of Electrical and Computer Engineering at Texas Tech University. Trustworthy and Efficient AI.">
+
+        <!-- UIkit CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/css/uikit.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+        <!-- UIkit JS -->
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/js/uikit.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/js/uikit-icons.min.js"></script>
+
+        <style>
+            /* ===== Palette: original burnt orange + navy ===== */
+            :root {
+                --brand: #BF5700;        /* original site orange */
+                --brand-soft: #fdf3ec;
+                --navy: #1f3a5f;         /* venue boxes */
+                --link: #1d5fa8;
+                --ink: #1b1b1b;
+                --muted: #5b6470;
+                --line: #e8e2dc;
+                --surface: #faf8f6;
+                --ttu-red: #cc0000;      /* news highlights */
+                --award: #0f7b4d;        /* publication honors (Highlight, Oral, awards) */
+            }
+
+            /* ===== Typography (Lato everywhere) ===== */
+            html, body, h1, h2, h3, h4, h5, h6, .uk-h2, .uk-card-title, .uk-navbar-nav > li > a, .uk-logo, .uk-nav {
+                font-family: "Lato", "Helvetica Neue", Arial, sans-serif !important;
+            }
+            html { color: #000; }
+            body { color: var(--ink); font-size: 16.5px; line-height: 1.65; }
+            a { color: var(--link); }
+            a:hover { color: var(--brand); }
+
+            /* ===== Original top: menu bar, photo, intro ===== */
+            .uk-navbar-container { background-color: #BF5701 !important; }
+            .uk-logo { font-weight: 700; }
+            .announcement-box {
+                margin: 1.5em 0 0.4em !important; padding: 1em 1.5em !important; border-left: 4px solid #cc0000 !important;
+                background-color: #fff5f5 !important; font-style: italic !important; font-size: 1.05em !important;
+                line-height: 1.6 !important; color: #333 !important; display: block !important;
+            }
+
+            /* ===== Sections below the intro (card layout) ===== */
+            :root {
+                --ttu-red: #cc0000;      /* News highlights and awards */
+                --venue: #6b2fa3;        /* venue and year boxes (purple) */
+                --title: #1f3a5f;        /* paper titles (navy) */
+            }
+            .m-wrap { width: 100%; margin: 0 auto; padding: 0 15px 20px; box-sizing: border-box; }
+            @media (min-width: 960px) { .m-wrap { width: 75%; padding: 0 30px 20px; } }
+            .m-wrap section { padding: 30px 0 10px; border-top: 1px solid var(--line); }
+            .m-wrap section:first-of-type { border-top: 0; padding-top: 6px; }
+            .m-wrap h2.m-title {
+                color: var(--brand); font-size: 1.7rem; font-weight: 900; margin: 0 0 18px;
+                display: flex; align-items: baseline; gap: 12px;
+            }
+            .m-wrap h2.m-title::before { content: ""; width: 6px; height: 22px; background: var(--brand); border-radius: 3px; align-self: center; }
+            .m-wrap h2.m-title .aside { font-size: .9rem; font-weight: 700; }
+            .m-wrap h3.m-sub {
+                font-size: 1.05rem; font-weight: 900; color: var(--title); text-transform: uppercase; letter-spacing: .06em;
+                margin: 22px 0 10px; padding-bottom: 6px; border-bottom: 2px solid var(--line);
+            }
+            .m-wrap ul { margin: 0; padding: 0; list-style: none; }
+
+            /* News */
+            .m-news li { display: grid; grid-template-columns: 96px 1fr; gap: 14px; padding: 8px 0; border-bottom: 1px dashed var(--line); }
+            .m-news li:last-child { border-bottom: 0; }
+            .m-news .date { color: var(--muted); font-weight: 700; font-size: .9rem; white-space: nowrap; padding-top: 1px; }
+            .m-news .new { display: inline-block; font-size: .68rem; font-weight: 900; color: #fff; background: var(--ttu-red); padding: 1px 7px; border-radius: 4px; margin-right: 6px; vertical-align: 2px; letter-spacing: .04em; }
+            .m-news .hl { color: var(--ttu-red); font-weight: 700; }
+            details.m-more { margin-top: 10px; }
+            details.m-more summary { cursor: pointer; font-weight: 700; color: var(--link); padding: 8px 0; list-style: none; }
+            details.m-more summary::-webkit-details-marker { display: none; }
+            details.m-more summary::before { content: "▸ "; }
+            details.m-more[open] summary::before { content: "▾ "; }
+
+            /* Publications */
+            .m-year { font-size: 1.1rem; font-weight: 900; color: var(--brand); margin: 26px 0 10px; letter-spacing: .04em; }
+            .m-pub { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 15px 18px; margin-bottom: 12px; transition: border-color .15s, box-shadow .15s; }
+            .m-pub:hover { border-color: var(--venue); box-shadow: 0 4px 16px rgba(107, 47, 163, .08); }
+            .m-pub .venue { display: inline-block; font-size: .75rem; font-weight: 900; color: #fff; background: var(--venue); padding: 2px 9px; border-radius: 5px; margin-right: 8px; vertical-align: 2px; letter-spacing: .02em; }
+            .m-pub .title { font-weight: 700; font-size: 1.04rem; color: var(--title); }
+            .m-pub .authors { color: var(--ink); font-size: .95rem; margin-top: 4px; }
+            .m-pub .where { font-style: italic; color: var(--muted); font-size: .92rem; }
+            .m-pub .note { font-size: .82rem; color: var(--muted); }
+            .m-pub .award { display: block; color: var(--ttu-red); font-weight: 900; font-size: .93rem; margin-top: 4px; }
+            .m-links { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 8px; }
+            .m-links a {
+                font-size: .82rem; font-weight: 700; padding: 4px 12px; border-radius: 6px; text-decoration: none;
+                border: 1px solid var(--link); color: var(--link); background: #fff; transition: all .15s;
+            }
+            .m-links a:hover { background: var(--link); color: #fff; text-decoration: none; }
+
+            /* Dated rows (teaching, experience, services, talks) */
+            .m-row { display: grid; grid-template-columns: 180px 1fr; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+            .m-row:last-child { border-bottom: 0; }
+            .m-row .when { color: var(--muted); font-weight: 700; font-size: .92rem; }
+            .m-row .what strong { color: var(--ink); }
+            .m-row .sub { display: block; color: var(--muted); font-size: .95rem; }
+            .m-row .kind { display: block; font-size: .88rem; font-weight: 700; color: #0e7c86;  }
+            .m-row ul { margin: 6px 0 0 18px; list-style: disc; }
+            .m-row ul li { padding: 2px 0; }
+            .m-row ul li::marker { color: var(--brand); }
+
+            /* Awards */
+            .m-awards li { display: flex; justify-content: space-between; gap: 16px; padding: 9px 0; border-bottom: 1px dashed var(--line); }
+            .m-awards li:last-child { border-bottom: 0; }
+            .m-awards .org { color: var(--muted); }
+            .m-awards .yr { color: var(--muted); font-size: .9rem; white-space: nowrap; }
+            .m-awards strong { color: var(--ink); }
+
+            /* People */
+            .m-people { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 4px 28px; }
+            .m-people li { padding: 8px 0; border-bottom: 1px dashed var(--line); }
+            .m-people .meta { color: var(--muted); font-size: .92rem; }
+            .m-people .role { display: inline-block; font-size: .88rem; font-weight: 700; color: #0e7c86;  margin-left: 6px; }
+
+            /* Cards */
+            .m-card { border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; background: var(--surface); }
+            .m-card.recruit { background: var(--brand-soft); border-left: 4px solid var(--brand); }
+            .m-card p { margin: 0 0 10px; }
+            .m-card p:last-child { margin-bottom: 0; }
+            .m-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+            .m-cards h4 { margin: 0 0 8px; font-size: 1.05rem; font-weight: 900; color: var(--ink); }
+            .m-cards .email { background: var(--brand); border-color: var(--brand); color: #fff; }
+            .m-cards .email h4 { color: #fff; }
+
+            @media (max-width: 640px) {
+                .m-news li, .m-row { grid-template-columns: 1fr; gap: 2px; }
+                .m-awards li { flex-direction: column; gap: 0; }
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="uk-navbar-container uk-margin uk-light" uk-navbar>
+            <div class="uk-navbar-left">
+                <a class="uk-navbar-item uk-logo uk-text-primary" href="index.html">Md Mostafijur Rahman</a>
+            </div>
+            <div class="uk-navbar-right">
+                <ul class="uk-navbar-nav">
+                    <li class="uk-active uk-visible@m"> <a href="index.html"> Home </a> </li>
+                    <li class="uk-active uk-visible@m"> <a href="https://utexas.app.box.com/file/1735637639142?s=f93s0hfwhyxsbit74edl01ejw7o049of" target='_'> CV </a> </li>
+                    <li class="uk-active uk-visible@m"> <a href="index.html#news"> News </a> </li>
+                    <li class="uk-active uk-visible@m"> <a href="index.html#research"> Publications </a> </li>
+                    <li class="uk-active uk-visible@m"> <a href="index.html#award"> Awards </a> </li>
+                    <li class="uk-active uk-visible@m"> <a href="index.html#teaching"> Teaching </a> </li>
+                    <li class="uk-active uk-visible@m"> <a href="index.html#services"> Services </a> </li>
+                    <li class="uk-active uk-visible@m"> <a href="index.html#presentations"> Talks </a> </li>
+                    <li class="uk-active uk-visible@m"> <a href="index.html#students"> Prospective Students </a> </li>
+                    <li class="uk-active uk-visible@m"> <a href="index.html#contact"> Contact </a> </li>
+                    <a class="uk-active uk-navbar-toggle uk-hidden@m" uk-navbar-toggle-icon href="#offcanvas-nav-primary" uk-toggle></a>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="offcanvas-nav-primary" uk-offcanvas="overlay: true">
+            <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+                <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+                    <li class="uk-active"> <a href="index.html"> Home </a> </li>
+                    <li class="uk-active"> <a href="https://utexas.app.box.com/file/1735637639142?s=f93s0hfwhyxsbit74edl01ejw7o049of" target='_'> CV </a> </li>
+                    <li class="uk-active"> <a href="index.html#news"> News </a> </li>
+                    <li class="uk-active"> <a href="index.html#research"> Publications </a> </li>
+                    <li class="uk-active"> <a href="index.html#award"> Awards </a> </li>
+                    <li class="uk-active"> <a href="index.html#teaching"> Teaching </a> </li>
+                    <li class="uk-active"> <a href="index.html#services"> Services </a> </li>
+                    <li class="uk-active"> <a href="index.html#presentations"> Talks </a> </li>
+                    <li class="uk-active"> <a href="index.html#students"> Prospective Students </a> </li>
+                    <li class="uk-active"> <a href="index.html#contact"> Contact </a> </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <div class="uk-flex uk-flex-center">
+            <div class="uk-container uk-width-1-1 uk-width-3-4@m uk-padding-small" uk-grid>
+                <a class="uk-flex uk-flex-center uk-width-1-1 uk-width-auto@m" href="#">
+                    <div class="uk-width-1-2 uk-width-medium@s">
+                        <img class="uk-border-circle uk-responsive-height uk-responsive-width" src="Mostafijur_headshot.png" alt="Portrait" /> </br>
+                        <!-- SOCIAL ICONS -->
+                        <div class="uk-flex uk-flex-center uk-margin-small-top">
+                            <a href="mailto:mostafijur.rahman@ttu.edu" class="uk-margin-small-right" aria-label="Email" style="font-size: 1.8em;">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                            <a href="https://scholar.google.com/citations?user=e0SzHPMAAAAJ" class="uk-margin-small-right" aria-label="Google Scholar" target="_blank" style="font-size: 1.8em;">
+                                <i class="fas fa-graduation-cap"></i>
+                            </a>
+                            <a href="https://github.com/mostafij-rahman" class="uk-margin-small-right" aria-label="GitHub" target="_blank" style="font-size: 1.8em;">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/mostafij-rahman" class="uk-margin-small-right" aria-label="LinkedIn" target="_blank" style="font-size: 1.8em;">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                        <div class="uk-flex uk-flex-center uk-margin-small-top">
+                            <a href="https://mlcommons.org/2026/05/2026-rising-stars/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; font-size: 0.95em; font-weight: 600; color: #BF5700; white-space: nowrap;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+                                🌟 2026 MLCommons Rising Star
+                            </a>
+                        </div>
+                    </div>
+                </a>
+
+                <div class="uk-width-expand uk-margin-remove">
+                    <p>
+                        I am a tenure-track Assistant Professor of Electrical and Computer Engineering at
+                        <a href="https://www.depts.ttu.edu/ece/" target="_blank" rel="noopener noreferrer">Texas Tech University</a>, since Fall 2026.
+                        I received my Ph.D. in Electrical and Computer Engineering from
+                        <a href="https://www.ece.utexas.edu/" target="_blank" rel="noopener noreferrer">The University of Texas at Austin</a>
+                        advised by
+                        <a href="https://radum.ece.utexas.edu/people/" target="_blank" rel="noopener noreferrer">Prof. Radu Marculescu</a>.
+                    </p>
+                    <p>
+                        My research is in <b>Trustworthy and Efficient AI</b>. I develop machine learning algorithms and architectures
+                        that <b>do more with less</b>, delivering strong performance with less data, less computation, and lower cost while
+                        staying reliable in high-stakes settings. My recent focus is on <b>Foundation Models</b>
+                        (Vision-Language Models, Multimodal Models, World Models, and Agentic AI), <b>Digital Twins</b>, and <b>Quantum Machine Learning</b>,
+                        and on making them practical for Biomedical Imaging and Healthcare, Computer Vision for Societal Impact, and Physical and Embodied AI.
+                        My long-term goal is to bring the benefits of AI to every hospital, device, and community that needs them.
+                        This work has appeared at CVPR, NeurIPS, MICCAI, ICCV, MIDL, WACV, and ICASSP.
+                    </p>
+                    <p>
+                        I completed research internships at
+                        <a href="https://research.gehealthcare.com/" target="_blank" rel="noopener noreferrer">GE HealthCare</a>,
+                        <a href="https://www.nhlbi.nih.gov/" target="_blank" rel="noopener noreferrer">NIH</a>, and
+                        <a href="https://www.bosch-ai.com/" target="_blank" rel="noopener noreferrer">Bosch AI</a>, and received
+                        the NIH Summer IRTA Fellowship, the Texas Health Catalyst Award, and the Discovery to Impact Award.
+                    </p>
+
+                    <blockquote class="announcement-box">
+                        📢 I am actively looking for self-motivated Ph.D. students starting Spring or Fall 2027.
+                        If you are interested, please read the <a href="#students">Prospective Students</a> section.
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+
+        <!-- Body -->
+        <main class="m-wrap">
+
+<!-- ================= NEWS ================= -->
+<section id="news">
+  <h2 class="m-title">News</h2>
+  <ul class="m-news">
+    <li><span class="date">Oct 2026</span><span><span class="new">NEW</span>Received the 🏆 <span class="hl">NeurIPS 2026 Top Reviewer Award</span> with complimentary conference registration.</span></li>
+    <li><span class="date">Sep 2026</span><span><span class="new">NEW</span>Presented my thesis (oral and poster) at <span class="hl">PhD Thesis Madness</span>, MICCAI 2026 Doctoral Symposium in Strasbourg. 🎤</span></li>
+    <li><span class="date">Sep 2026</span><span><span class="new">NEW</span>Joined <span class="hl">Texas Tech University</span> as a tenure-track Assistant Professor of ECE.</span></li>
+    <li><span class="date">Aug 2026</span><span>Selected for <span class="hl">PhD Thesis Madness</span> at the <span class="hl">MICCAI 2026 Doctoral Symposium</span>.</span></li>
+    <li><span class="date">Jun 2026</span><span>Defended my Ph.D. at The University of Texas at Austin. 🎓</span></li>
+    <li><span class="date">Apr 2026</span><span>Selected as a <a href="https://mlcommons.org/2026/05/2026-rising-stars/" target="_blank" rel="noopener">2026 MLCommons ML &amp; Systems Rising Star</a> (22.9% acceptance).</span></li>
+    <li><span class="date">Sep 2025</span><span><a href="https://arxiv.org/abs/2510.22995" target="_blank" rel="noopener">LoMix</a> (label-efficient segmentation) accepted to <span class="hl">NeurIPS 2025</span>.</span></li>
+    <li><span class="date">Jun 2025</span><span><a href="https://papers.miccai.org/miccai-2025/paper/4895_paper.pdf" target="_blank" rel="noopener">EfficientMedNeXt</a> accepted to <span class="hl">MICCAI 2025</span> with a 🏆 <span class="hl">Highlight award (top 4.87%)</span>.</span></li>
+    <li><span class="date">Feb 2025</span><span><a href="https://openaccess.thecvf.com/content/CVPR2025/html/Rahman_EffiDec3D_An_Optimized_Decoder_for_High-Performance_and_Efficient_3D_Medical_CVPR_2025_paper.html" target="_blank" rel="noopener">EffiDec3D</a> accepted to <span class="hl">CVPR 2025</span> with a 🏆 <span class="hl">Highlight award (top 2.98%)</span>.</span></li>
+  </ul>
+  <details class="m-more">
+    <summary>More news</summary>
+    <ul class="m-news">
+      <li><span class="date">May 2026</span><span>Invited talk on efficient and reliable AI for healthcare at the <a href="https://voxel51.com/events?category=meetups" target="_blank" rel="noopener">AI, ML &amp; Computer Vision Meetup</a>. <a href="https://www.youtube.com/watch?v=RDnMhCu0shs" target="_blank" rel="noopener">Watch</a>.</span></li>
+      <li><span class="date">Nov 2025</span><span><a href="https://openaccess.thecvf.com/content/WACV2026/html/Munir_AdaptViG_Adaptive_Vision_GNN_with_Exponential_Decay_Gating_WACV_2026_paper.html" target="_blank" rel="noopener">AdaptViG</a> (adaptive vision GNN) accepted to <span class="hl">WACV 2026</span>.</span></li>
+      <li><span class="date">Oct 2025</span><span><a href="https://openreview.net/pdf?id=cmEzgaYIJC" target="_blank" rel="noopener">SearchViG</a> accepted to <span class="hl">LOG 2025</span>.</span></li>
+      <li><span class="date">Oct 2025</span><span>My 3D medical imaging research featured in <a href="https://www.ece.utexas.edu/news/new-ai-breakthroughs-bring-3d-imaging-patients-bedside" target="_blank" rel="noopener">UT ECE News</a>.</span></li>
+      <li><span class="date">Oct 2025</span><span>Poster on PRIME at the <a href="https://imagine.utexas.edu/events/amd-poster-session-imagine-consortium-0" target="_blank" rel="noopener">iMAGiNE Consortium at AMD</a>.</span></li>
+      <li><span class="date">Aug 2025</span><span>Invited talk on EffiDec3D at the <a href="https://voxel51.com/events?category=meetups" target="_blank" rel="noopener">AI, ML &amp; Computer Vision Meetup</a>. <a href="https://youtu.be/3OXza9rMX6E" target="_blank" rel="noopener">Watch</a>.</span></li>
+      <li><span class="date">Jul 2025</span><span><a href="https://openaccess.thecvf.com/content/ICCV2025W/CVAMD/html/Rahman_MK-UNet_Multi-kernel_Lightweight_CNN_for_Medical_Image_Segmentation_ICCVW_2025_paper.html" target="_blank" rel="noopener">MK-UNet</a> accepted to the <span class="hl">ICCV 2025</span> CVAMD Workshop as an <span class="hl">Oral</span>.</span></li>
+      <li><span class="date">Jul 2025</span><span><a href="https://www.sciencedirect.com/science/article/pii/S174680942501122X?dgcid=coauthor" target="_blank" rel="noopener">EDLDNet</a> accepted to Biomedical Signal Processing and Control.</span></li>
+      <li><span class="date">Jul 2025</span><span>Received the 🏆 <span class="hl">MIDL 2025 Travel Award</span> and gave an <span class="hl">Oral talk</span> on <a href="https://proceedings.mlr.press/v301/rahman26a.html" target="_blank" rel="noopener">PRIME</a> in Salt Lake City.</span></li>
+      <li><span class="date">Jul 2025</span><span>Received the 🏆 <span class="hl">MICCAI 2025 NIH Travel Award</span> to present EfficientMedNeXt in Daejeon.</span></li>
+      <li><span class="date">Jul 2025</span><span>Invited talk on PRIME at San Ramon Journal Club, GE HealthCare.</span></li>
+      <li><span class="date">Jun 2025</span><span>Invited talk on EffiDec3D at San Ramon Journal Club, GE HealthCare.</span></li>
+      <li><span class="date">Jun 2025</span><span>Presented two papers at <span class="hl">CVPR 2025</span> (EffiDec3D and <a href="https://openaccess.thecvf.com/content/CVPR2025W/eLVM/html/Munir_From_Data_to_Design_Leveraging_Frequency_Statistics_for_Efficient_Neural_CVPRW_2025_paper.html" target="_blank" rel="noopener">From Data to Design</a>).</span></li>
+      <li><span class="date">Jun 2025</span><span>Attended Stanford AI Week 2025 with a scholarship (AIMI, RAISE, and Pediatric AIMI Symposiums).</span></li>
+      <li><span class="date">May 2025</span><span>Joined <span class="hl">GE HealthCare</span>, San Ramon as an <span class="hl">AI/ML PhD Intern</span>.</span></li>
+      <li><span class="date">May 2025</span><span>Selected for the <span class="hl">MIDL 2025 Doctoral Symposium</span> in Salt Lake City.</span></li>
+      <li><span class="date">Apr 2025</span><span>Invited talk at <a href="https://stanford-medai.github.io/" target="_blank" rel="noopener">Stanford MedAI</a>. <a href="https://www.youtube.com/watch?v=HsqIxvm8Sdw" target="_blank" rel="noopener">Watch</a>.</span></li>
+      <li><span class="date">Apr 2025</span><span>Received the 🏆 <span class="hl">CVPR 2025 Broadening Participation Award</span> to present EffiDec3D in Nashville.</span></li>
+      <li><span class="date">Apr 2025</span><span>Guest lecture on <i>Deep Learning in Biomedical Imaging</i> for ECE379K (EdgeAI), The University of Texas at Austin.</span></li>
+      <li><span class="date">Mar 2025</span><span><a href="https://openaccess.thecvf.com/content/CVPR2025W/eLVM/html/Munir_From_Data_to_Design_Leveraging_Frequency_Statistics_for_Efficient_Neural_CVPRW_2025_paper.html" target="_blank" rel="noopener">From Data to Design</a> accepted to <span class="hl">CVPRW 2025</span> (Efficient Large Vision Models).</span></li>
+      <li><span class="date">Mar 2025</span><span><a href="https://proceedings.mlr.press/v301/rahman26a.html" target="_blank" rel="noopener">PRIME</a> (training-free dataset pruning) accepted to <span class="hl">MIDL 2025</span> as an <span class="hl">Oral</span>.</span></li>
+      <li><span class="date">Feb 2025</span><span>Attended the UT System Trauma Research Symposium 2025.</span></li>
+      <li><span class="date">Jan 2025</span><span>Poster at GAIN 2025 on EMCAD.</span></li>
+      <li><span class="date">Dec 2024</span><span><a href="https://arxiv.org/abs/2405.06166" target="_blank" rel="noopener">MDNet</a> accepted to <span class="hl">ICASSP 2025</span>.</span></li>
+      <li><span class="date">Oct 2024</span><span>Our Dell Med collaboration on biomedical imaging featured in <a href="https://news.utexas.edu/2024/10/17/ai-in-the-gi/" target="_blank" rel="noopener">UT News</a>.</span></li>
+      <li><span class="date">Oct 2024</span><span><a href="https://arxiv.org/abs/2412.10995" target="_blank" rel="noopener">RapidNet</a> (efficient vision model) accepted to <span class="hl">WACV 2025</span>.</span></li>
+      <li><span class="date">Sep 2024</span><span>Abstract on few-shot image denoising (from my NIH internship) accepted to the EPFL Latsis Symposium on Smart Microscopy 2024.</span></li>
+      <li><span class="date">Aug 2024</span><span>Invited talk at NHLBI, NIH on <i>Efficient Deep Learning for Biomedical Imaging</i>, and a poster on lightweight multi-scale light-microscopy denoising.</span></li>
+      <li><span class="date">Jul 2024</span><span>Won the 🏆 <span class="hl">Texas Health Catalyst Award 2024</span> for CASCADE.</span></li>
+      <li><span class="date">May 2024</span><span>Joined OAIR, NHLBI, NIH as a <span class="hl">Summer IRTA Fellow</span>, working with Sarah Hooper and Christian Combs.</span></li>
+      <li><span class="date">Apr 2024</span><span><a href="https://openaccess.thecvf.com/content/CVPR2024W/DEF-AI-MIA/html/Rahman_PP-SAM_Perturbed_Prompts_for_Robust_Adaption_of_Segment_Anything_Model_CVPRW_2024_paper.html" target="_blank" rel="noopener">PP-SAM</a> accepted to <span class="hl">CVPRW 2024</span>.</span></li>
+      <li><span class="date">Mar 2024</span><span>Received the 🏆 <span class="hl">Summer IRTA Fellowship</span> from OAIR, NHLBI, NIH.</span></li>
+      <li><span class="date">Feb 2024</span><span><a href="https://openaccess.thecvf.com/content/CVPR2024/html/Rahman_EMCAD_Efficient_Multi-scale_Convolutional_Attention_Decoding_for_Medical_Image_Segmentation_CVPR_2024_paper.html" target="_blank" rel="noopener">EMCAD</a> accepted to <span class="hl">CVPR 2024</span>.</span></li>
+      <li><span class="date">Feb 2024</span><span><a href="https://openaccess.thecvf.com/content/CVPR2024/html/Munir_GreedyViG_Dynamic_Axial_Graph_Construction_for_Efficient_Vision_GNNs_CVPR_2024_paper.html" target="_blank" rel="noopener">GreedyViG</a> accepted to <span class="hl">CVPR 2024</span>.</span></li>
+      <li><span class="date">Jan 2024</span><span>Poster at GAIN 2024 on G-CASCADE.</span></li>
+      <li><span class="date">Aug 2023</span><span><a href="https://openaccess.thecvf.com/content/WACV2024/html/Rahman_G-CASCADE_Efficient_Cascaded_Graph_Convolutional_Decoding_for_2D_Medical_Image_WACV_2024_paper.html" target="_blank" rel="noopener">G-CASCADE</a> accepted to <span class="hl">WACV 2024</span>.</span></li>
+      <li><span class="date">Jul 2023</span><span>Received the 🏆 <span class="hl">Professional Development Award</span>, UT Austin Graduate School.</span></li>
+      <li><span class="date">May 2023</span><span>Summer 2023 Machine Learning Research Intern at <span class="hl">Robert Bosch Research</span>, Pittsburgh.</span></li>
+      <li><span class="date">Apr 2023</span><span>Won the 🏆 <span class="hl">Ram's Horn Best Project Award</span> in Prof. Alan Bovik's Digital Video course, UT Austin.</span></li>
+      <li><span class="date">Mar 2023</span><span>Received the 🏆 <span class="hl">Best Poster Award</span> (CASCADE) at GAIN 2023, UT Austin.</span></li>
+      <li><span class="date">Mar 2023</span><span><a href="https://proceedings.mlr.press/v227/rahman24a.html" target="_blank" rel="noopener">MERIT</a> accepted to <span class="hl">MIDL 2023</span>.</span></li>
+      <li><span class="date">Oct 2022</span><span><a href="https://openaccess.thecvf.com/content/WACV2023/html/Rahman_Medical_Image_Segmentation_via_Cascaded_Attention_Decoding_WACV_2023_paper.html" target="_blank" rel="noopener">CASCADE</a> (first convolutional attention-based decoding) accepted to <span class="hl">WACV 2023</span>.</span></li>
+      <li><span class="date">May 2022</span><span>Received the 🏆 <span class="hl">Feldman Graduate Research Fellowship</span>, UT Austin.</span></li>
+      <li><span class="date">Jan 2022</span><span>Started my Ph.D. in Electrical and Computer Engineering at UT Austin, joining the System Level Design (SLD) Group under Prof. Radu Marculescu.</span></li>
+    </ul>
+  </details>
+</section>
+
+<!-- ================= PUBLICATIONS ================= -->
+<section id="research">
+  <h2 class="m-title">Selected Publications <span class="aside"><a href="https://scholar.google.com/citations?user=e0SzHPMAAAAJ" target="_blank" rel="noopener">Full list on Google Scholar →</a></span></h2>
+
+  <div class="m-year">2026</div>
+  <ul>
+    <li class="m-pub">
+      <div><span class="venue">arXiv 2026</span><span class="title">PipeFlow: Pipelining Inversion and Editing for Faster Long Form Video Synthesis</span></div>
+      <div class="authors"><b>Md Mostafijur Rahman*</b>, Mustafa Munir*, Kartikeya Bhardwaj, Paul N. Whatmough, Radu Marculescu</div>
+      <div class="note">* Equal contribution</div>
+      <div class="m-links"><a href="https://arxiv.org/pdf/2512.24026" target="_blank" rel="noopener">arXiv</a></div>
+    </li>
+    <li class="m-pub">
+      <div><span class="venue">WACV 2026</span><span class="title">AdaptViG: Adaptive Vision GNN with Exponential Decay Gating</span></div>
+      <div class="authors">Mustafa Munir, <b>Md Mostafijur Rahman</b>, Radu Marculescu</div>
+      <div class="where">IEEE/CVF Winter Conference on Applications of Computer Vision</div>
+      <div class="m-links">
+        <a href="https://openaccess.thecvf.com/content/WACV2026/html/Munir_AdaptViG_Adaptive_Vision_GNN_with_Exponential_Decay_Gating_WACV_2026_paper.html" target="_blank" rel="noopener">Paper</a>
+        <a href="https://arxiv.org/pdf/2511.09942" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://github.com/mmunir127/AdaptViG" target="_blank" rel="noopener">Code</a>
+      </div>
+    </li>
+  </ul>
+
+  <div class="m-year">2025</div>
+  <ul>
+    <li class="m-pub">
+      <div><span class="venue">NeurIPS 2025</span><span class="title">LoMix: Learnable Weighted Multi-Scale Logits Mixing for Medical Image Segmentation</span></div>
+      <div class="authors"><b>Md Mostafijur Rahman</b>, Radu Marculescu</div>
+      <div class="where">Advances in Neural Information Processing Systems</div>
+      <div class="m-links">
+        <a href="https://neurips.cc/virtual/2025/poster/119650" target="_blank" rel="noopener">Paper</a>
+        <a href="https://arxiv.org/abs/2510.22995" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://github.com/SLDGroup/LoMix" target="_blank" rel="noopener">Code</a>
+      </div>
+    </li>
+    <li class="m-pub">
+      <div><span class="venue">MICCAI 2025</span><span class="title">EfficientMedNeXt: Multi-Receptive Dilated Convolutions for Medical Image Segmentation</span></div>
+      <div class="authors"><b>Md Mostafijur Rahman</b>, Mustafa Munir, Radu Marculescu</div>
+      <div class="where">International Conference on Medical Image Computing and Computer Assisted Intervention</div>
+      <span class="award">🏆 Highlight (top 4.87% of submissions)</span>
+      <div class="m-links">
+        <a href="https://papers.miccai.org/miccai-2025/paper/4895_paper.pdf" target="_blank" rel="noopener">Paper</a>
+        <a href="https://github.com/SLDGroup/EfficientMedNeXt" target="_blank" rel="noopener">Code</a>
+      </div>
+    </li>
+    <li class="m-pub">
+      <div><span class="venue">CVPR 2025</span><span class="title">EffiDec3D: An Optimized Decoder for High-Performance and Efficient 3D Medical Image Segmentation</span></div>
+      <div class="authors"><b>Md Mostafijur Rahman</b>, Radu Marculescu</div>
+      <div class="where">IEEE/CVF Conference on Computer Vision and Pattern Recognition</div>
+      <span class="award">🏆 Highlight (top 2.98% of submissions)</span>
+      <div class="m-links">
+        <a href="https://openaccess.thecvf.com/content/CVPR2025/html/Rahman_EffiDec3D_An_Optimized_Decoder_for_High-Performance_and_Efficient_3D_Medical_CVPR_2025_paper.html" target="_blank" rel="noopener">Paper</a>
+        <a href="https://github.com/SLDGroup/EffiDec3D" target="_blank" rel="noopener">Code</a>
+      </div>
+    </li>
+    <li class="m-pub">
+      <div><span class="venue">ICCVW 2025</span><span class="title">MK-UNet: Multi-kernel Lightweight CNN for Medical Image Segmentation</span></div>
+      <div class="authors"><b>Md Mostafijur Rahman</b>, Radu Marculescu</div>
+      <div class="where">IEEE/CVF International Conference on Computer Vision Workshops (CVAMD)</div>
+      <span class="award">🏆 Oral</span>
+      <div class="m-links">
+        <a href="https://openaccess.thecvf.com/content/ICCV2025W/CVAMD/html/Rahman_MK-UNet_Multi-kernel_Lightweight_CNN_for_Medical_Image_Segmentation_ICCVW_2025_paper.html" target="_blank" rel="noopener">Paper</a>
+        <a href="https://arxiv.org/abs/2509.18493" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://github.com/SLDGroup/MK-UNet" target="_blank" rel="noopener">Code</a>
+      </div>
+    </li>
+    <li class="m-pub">
+      <div><span class="venue">MIDL 2025</span><span class="title">Training-Free Dataset Pruning for Polyp Segmentation via Community Detection in Similarity Networks</span></div>
+      <div class="authors"><b>Md Mostafijur Rahman</b>, Radu Marculescu</div>
+      <div class="where">Medical Imaging with Deep Learning</div>
+      <span class="award">🏆 Oral (top 16% of submitted full papers)</span>
+      <div class="m-links">
+        <a href="https://proceedings.mlr.press/v301/rahman26a.html" target="_blank" rel="noopener">Paper</a>
+        <a href="https://github.com/SLDGroup/PRIME" target="_blank" rel="noopener">Code</a>
+      </div>
+    </li>
+    <li class="m-pub">
+      <div><span class="venue">LOG 2025</span><span class="title">SearchViG: Optimal Vision GNNs via Ramanujan Spectral Optimization</span></div>
+      <div class="authors">Mustafa Munir, <b>Md Mostafijur Rahman</b>, Xiwen Wei, Yuedong Yang, Radu Marculescu</div>
+      <div class="where">Learning on Graphs Conference</div>
+      <div class="m-links">
+        <a href="https://openreview.net/pdf?id=cmEzgaYIJC" target="_blank" rel="noopener">Paper</a>
+        <a href="https://github.com/SLDGroup/SearchViG" target="_blank" rel="noopener">Code</a>
+      </div>
+    </li>
+    <li class="m-pub">
+      <div><span class="venue">WACV 2025</span><span class="title">RapidNet: Multi-Level Dilated Convolution Based Mobile Backbone</span></div>
+      <div class="authors">Mustafa Munir, <b>Md Mostafijur Rahman</b>, Radu Marculescu</div>
+      <div class="where">IEEE/CVF Winter Conference on Applications of Computer Vision</div>
+      <span class="award">🏆 GAIN Best Poster Award 2025</span>
+      <div class="m-links">
+        <a href="https://openaccess.thecvf.com/content/WACV2025/papers/Munir_RapidNet_Multi-Level_Dilated_Convolution_Based_Mobile_Backbone_WACV_2025_paper.pdf" target="_blank" rel="noopener">Paper</a>
+        <a href="https://arxiv.org/abs/2412.10995" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://github.com/mmunir127/RapidNet-Official" target="_blank" rel="noopener">Code</a>
+      </div>
+    </li>
+    <li class="m-pub">
+      <div><span class="venue">CVPRW 2025</span><span class="title">From Data to Design: Leveraging Frequency Statistics for Efficient Neural Network Architectures</span></div>
+      <div class="authors">Mustafa Munir, Guihong Li, <b>Md Mostafijur Rahman</b>, Radu Marculescu</div>
+      <div class="where">IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops</div>
+      <div class="m-links">
+        <a href="https://openaccess.thecvf.com/content/CVPR2025W/eLVM/html/Munir_From_Data_to_Design_Leveraging_Frequency_Statistics_for_Efficient_Neural_CVPRW_2025_paper.html" target="_blank" rel="noopener">Paper</a>
+      </div>
+    </li>
+    <li class="m-pub">
+      <div><span class="venue">J-BSPC 2025</span><span class="title">An Efficient Dual-Line Decoder Network with Multi-Scale Convolutional Attention for Multi-organ Segmentation</span></div>
+      <div class="authors">Riad Hassan, M. Rubaiyat Hossain Mondal, Sheikh Iqbal Ahamed, Fahad Mostafa, <b>Md Mostafijur Rahman</b></div>
+      <div class="where">Biomedical Signal Processing and Control</div>
+      <div class="m-links">
+        <a href="https://www.sciencedirect.com/science/article/pii/S174680942501122X?dgcid=coauthor" target="_blank" rel="noopener">Paper</a>
+        <a href="https://arxiv.org/abs/2508.17007" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://github.com/riadhassan/EDLDNet" target="_blank" rel="noopener">Code</a>
+      </div>
+    </li>
+    <li class="m-pub">
+      <div><span class="venue">ICASSP 2025</span><span class="title">MDNet: Multi-Decoder Network for Abdominal CT Organs Segmentation</span></div>
+      <div class="authors">Debesh Jha, Nikhil Kumar Tomar, Koushik Biswas, Gorkem Durak, Matthew Antalek, Zheyuan Zhang, Bin Wang, <b>Md Mostafijur Rahman</b>, Hongyi Pan, Alpay Medetalibeyoglu, Yury Velichko, Daniela Ladner, Amir Borhani, Ulas Bagci</div>
+      <div class="where">IEEE International Conference on Acoustics, Speech, and Signal Processing</div>
+      <div class="m-links">
+        <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10889746" target="_blank" rel="noopener">Paper</a>
+        <a href="https://arxiv.org/abs/2405.06166" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://github.com/DebeshJha/MDNet" target="_blank" rel="noopener">Code</a>
+      </div>
+    </li>
+  </ul>
+
+  <div class="m-year">2024</div>
+  <ul>
+    <li class="m-pub">
+      <div><span class="venue">CVPR 2024</span><span class="title">EMCAD: Efficient Multi-scale Convolutional Attention Decoding for Medical Image Segmentation</span></div>
+      <div class="authors"><b>Md Mostafijur Rahman</b>, Mustafa Munir, Radu Marculescu</div>
+      <div class="where">IEEE/CVF Conference on Computer Vision and Pattern Recognition</div>
+      <div class="m-links">
+        <a href="https://openaccess.thecvf.com/content/CVPR2024/html/Rahman_EMCAD_Efficient_Multi-scale_Convolutional_Attention_Decoding_for_Medical_Image_Segmentation_CVPR_2024_paper.html" target="_blank" rel="noopener">Paper</a>
+        <a href="https://arxiv.org/abs/2405.06880" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://github.com/SLDGroup/EMCAD" target="_blank" rel="noopener">Code</a>
+      </div>
+    </li>
+    <li class="m-pub">
+      <div><span class="venue">CVPR 2024</span><span class="title">GreedyViG: Dynamic Axial Graph Construction for Efficient Vision GNNs</span></div>
+      <div class="authors">Mustafa Munir, William Avery, <b>Md Mostafijur Rahman</b>, Radu Marculescu</div>
+      <div class="where">IEEE/CVF Conference on Computer Vision and Pattern Recognition</div>
+      <div class="m-links">
+        <a href="https://openaccess.thecvf.com/content/CVPR2024/html/Munir_GreedyViG_Dynamic_Axial_Graph_Construction_for_Efficient_Vision_GNNs_CVPR_2024_paper.html" target="_blank" rel="noopener">Paper</a>
+        <a href="https://arxiv.org/abs/2405.06849" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://github.com/SLDGroup/GreedyViG" target="_blank" rel="noopener">Code</a>
+      </div>
+    </li>
+    <li class="m-pub">
+      <div><span class="venue">CVPRW 2024</span><span class="title">PP-SAM: Perturbed Prompts for Robust Adaptation of Segment Anything Model for Polyp Segmentation</span></div>
+      <div class="authors"><b>Md Mostafijur Rahman</b>, Mustafa Munir, Debesh Jha, Ulas Bagci, Radu Marculescu</div>
+      <div class="where">IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops</div>
+      <div class="m-links">
+        <a href="https://openaccess.thecvf.com/content/CVPR2024W/DEF-AI-MIA/papers/Rahman_PP-SAM_Perturbed_Prompts_for_Robust_Adaption_of_Segment_Anything_Model_CVPRW_2024_paper.pdf" target="_blank" rel="noopener">Paper</a>
+        <a href="https://arxiv.org/abs/2405.16740" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://github.com/SLDGroup/PP-SAM" target="_blank" rel="noopener">Code</a>
+      </div>
+    </li>
+    <li class="m-pub">
+      <div><span class="venue">WACV 2024</span><span class="title">G-CASCADE: Efficient Cascaded Graph Convolutional Decoding for 2D Medical Image Segmentation</span></div>
+      <div class="authors"><b>Md Mostafijur Rahman</b>, Radu Marculescu</div>
+      <div class="where">IEEE/CVF Winter Conference on Applications of Computer Vision</div>
+      <div class="m-links">
+        <a href="https://openaccess.thecvf.com/content/WACV2024/html/Rahman_G-CASCADE_Efficient_Cascaded_Graph_Convolutional_Decoding_for_2D_Medical_Image_WACV_2024_paper.html" target="_blank" rel="noopener">Paper</a>
+        <a href="https://arxiv.org/abs/2310.16175" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://github.com/SLDGroup/G-CASCADE" target="_blank" rel="noopener">Code</a>
+      </div>
+    </li>
+  </ul>
+
+  <div class="m-year">2023</div>
+  <ul>
+    <li class="m-pub">
+      <div><span class="venue">MIDL 2023</span><span class="title">Multi-scale Hierarchical Vision Transformer with Cascaded Attention Decoding for Medical Image Segmentation</span></div>
+      <div class="authors"><b>Md Mostafijur Rahman</b>, Radu Marculescu</div>
+      <div class="where">Medical Imaging with Deep Learning</div>
+      <div class="m-links">
+        <a href="https://proceedings.mlr.press/v227/rahman24a/rahman24a.pdf" target="_blank" rel="noopener">Paper</a>
+        <a href="https://arxiv.org/abs/2303.16892" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://github.com/SLDGroup/MERIT" target="_blank" rel="noopener">Code</a>
+      </div>
+    </li>
+    <li class="m-pub">
+      <div><span class="venue">WACV 2023</span><span class="title">Medical Image Segmentation via Cascaded Attention Decoding</span></div>
+      <div class="authors"><b>Md Mostafijur Rahman</b>, Radu Marculescu</div>
+      <div class="where">IEEE/CVF Winter Conference on Applications of Computer Vision</div>
+      <span class="award">🏆 GAIN Best Poster Award 2023 · 🏆 Texas Health Catalyst Award 2024 · 🏆 UT Proof of Concepts Award 2025 · 🏆 NSF I-Corps Award 2025</span>
+      <div class="m-links">
+        <a href="https://openaccess.thecvf.com/content/WACV2023/html/Rahman_Medical_Image_Segmentation_via_Cascaded_Attention_Decoding_WACV_2023_paper.html" target="_blank" rel="noopener">Paper</a>
+        <a href="https://github.com/SLDGroup/CASCADE" target="_blank" rel="noopener">Code</a>
+      </div>
+    </li>
+  </ul>
+
+  <details class="m-more">
+    <summary>Earlier publications (before 2022)</summary>
+    <ul>
+      <li class="m-pub">
+        <div><span class="venue">GeoAI 2021</span><span class="title">Mapping Road Safety Barriers Across Street View Image Sequences: A Hybrid Object Detection and Recurrent Model</span></div>
+        <div class="authors"><b>Md Mostafijur Rahman</b>, Arpan Man Sainju, Zhe Jiang</div>
+        <div class="where">ACM SIGSPATIAL International Workshop on AI for Geographic Knowledge Discovery</div>
+      </li>
+      <li class="m-pub">
+        <div><span class="venue">ICIEV 2019</span><span class="title">Bangla Handwritten Basic Character Recognition Using Deep Convolutional Neural Network</span></div>
+        <div class="authors">Chandrika Saha, Rahat Hossain Faisal, <b>Md Mostafijur Rahman</b></div>
+        <div class="where">International Conference on Informatics, Electronics, and Vision</div>
+      </li>
+      <li class="m-pub">
+        <div><span class="venue">J-SIVP 2018</span><span class="title">MCCT: a Multi-channel Complementary Census Transform for Image Classification</span></div>
+        <div class="authors"><b>Md Mostafijur Rahman</b>, Shanto Rahman, Mohammad Shoyaib</div>
+        <div class="where">Signal, Image and Video Processing</div>
+      </li>
+      <li class="m-pub">
+        <div><span class="venue">JIVP 2017</span><span class="title">DTCTH: a Discriminative Local Pattern Descriptor for Image Classification</span></div>
+        <div class="authors"><b>Md Mostafijur Rahman</b>, Shanto Rahman, Rayhanur Rahman, Mainul Hossain, Mohammad Shoyaib</div>
+        <div class="where">EURASIP Journal on Image and Video Processing</div>
+        <div class="m-links"><a href="https://jivp-eurasipjournals.springeropen.com/articles/10.1186/s13640-017-0178-1" target="_blank" rel="noopener">Paper</a></div>
+      </li>
+      <li class="m-pub">
+        <div><span class="venue">JIVP 2016</span><span class="title">An Adaptive Gamma Correction for Image Enhancement</span></div>
+        <div class="authors">Shanto Rahman, <b>Md Mostafijur Rahman</b>, M. Abdullah-Al-Wadud, Golam Dastegir Al-Quaderi, Mohammad Shoyaib</div>
+        <div class="where">EURASIP Journal on Image and Video Processing</div>
+        <span class="award">Used by NIH in the MIPAV API</span>
+        <div class="m-links"><a href="https://jivp-eurasipjournals.springeropen.com/articles/10.1186/s13640-016-0138-1" target="_blank" rel="noopener">Paper</a></div>
+      </li>
+      <li class="m-pub">
+        <div><span class="venue">ICCIT 2015</span><span class="title">Noise Adaptive Binary Pattern for Face Image Analysis</span></div>
+        <div class="authors"><b>Md Mostafijur Rahman</b>, Shanto Rahman, Minhas Kamal, M. Abdullah-Al-Wadud, Emon Kumar Dey, Mohammad Shoyaib</div>
+        <div class="where">International Conference on Computer and Information Technology</div>
+        <span class="award">🏆 Best Paper Award</span>
+      </li>
+    </ul>
+  </details>
+</section>
+
+<!-- ================= AWARDS ================= -->
+<section id="award">
+  <h2 class="m-title">Awards &amp; Honors</h2>
+  <ul class="m-awards">
+    <li><span><strong>Top Reviewer Award</strong> with complimentary registration <span class="org">· NeurIPS 2026</span></span><span class="yr">Oct 2026</span></li>
+    <li><span><strong>ML &amp; Systems Rising Star</strong> <span class="org">· MLCommons</span></span><span class="yr">2026</span></li>
+    <li><span><strong>MIDL Travel Award</strong> <span class="org">· MIDL</span></span><span class="yr">Jul 2025</span></li>
+    <li><span><strong>MICCAI NIH Travel Award</strong> <span class="org">· MICCAI</span></span><span class="yr">Jul 2025</span></li>
+    <li><span><strong>CVPR Broadening Participation Award</strong> <span class="org">· CVPR</span></span><span class="yr">Jun 2025</span></li>
+    <li><span><strong>Stanford AIMI In-person Attendance Scholarship</strong> <span class="org">· Stanford AIMI</span></span><span class="yr">Jun 2025</span></li>
+    <li><span><strong>NSF I-Corps Award</strong> (team member) <span class="org">· National Science Foundation</span></span><span class="yr">2025–2026</span></li>
+    <li><span><strong>Proof of Concepts Award</strong> (team member) <span class="org">· The University of Texas at Austin</span></span><span class="yr">2025</span></li>
+    <li><span><strong>Texas Health Catalyst Award</strong> (team member) <span class="org">· The University of Texas at Austin</span></span><span class="yr">2024</span></li>
+    <li><span><strong>IRTA Fellowship</strong> <span class="org">· Office of AI Research, NIH</span></span><span class="yr">Summer 2024</span></li>
+    <li><span><strong>Professional Development Award</strong> <span class="org">· The University of Texas at Austin</span></span><span class="yr">Jul 2023</span></li>
+    <li><span><strong>Ram's Horn Best Project Award</strong> <span class="org">· The University of Texas at Austin</span></span><span class="yr">May 2023</span></li>
+    <li><span><strong>Best Poster Award</strong> <span class="org">· GAIN, The University of Texas at Austin</span></span><span class="yr">Mar 2023</span></li>
+    <li><span><strong>Feldman Graduate Research Fellowship</strong> <span class="org">· The University of Texas at Austin</span></span><span class="yr">Summer 2022</span></li>
+    <li><span><strong>Graduate Council Research Fellowship</strong> <span class="org">· The University of Alabama</span></span><span class="yr">2021</span></li>
+    <li><span><strong>Innovation Award</strong> <span class="org">· Access to Information (A2I), Prime Minister's Office, Bangladesh</span></span><span class="yr">2018</span></li>
+    <li><span><strong>Research Grant</strong> <span class="org">· University Grants Commission, Bangladesh</span></span><span class="yr">2017–2018</span></li>
+    <li><span><strong>Graduate Research Fellowship</strong> <span class="org">· ICT Ministry, Bangladesh</span></span><span class="yr">2015–2016</span></li>
+    <li><span><strong>Best Paper Award (1st Prize)</strong> <span class="org">· ICCIT</span></span><span class="yr">Dec 2015</span></li>
+  </ul>
+</section>
+
+<!-- ================= TEACHING ================= -->
+<section id="teaching">
+  <h2 class="m-title">Teaching</h2>
+  <div class="m-row">
+    <div class="when">Fall 2026 – Present</div>
+    <div class="what">
+      <strong>Texas Tech University</strong>
+      <span class="sub">Assistant Professor, Department of Electrical and Computer Engineering</span>
+      <ul>
+        <li><b>ECE 4363/5363 Pattern Recognition</b> (Spring 2027)</li>
+        <li><b>ECE 3331 Robotics Project Lab</b> (Fall 2026)</li>
+      </ul>
+    </div>
+  </div>
+  <div class="m-row">
+    <div class="when">Apr 2025</div>
+    <div class="what"><strong>The University of Texas at Austin</strong><span class="sub">Guest Lecturer, ECE379K Machine Learning and Data Analytics for EdgeAI</span></div>
+  </div>
+  <div class="m-row">
+    <div class="when">Jan 2022 – May 2022</div>
+    <div class="what"><strong>The University of Texas at Austin</strong><span class="sub">Graduate Teaching Assistant, EE319K Introduction to Embedded Systems (Dr. Jonathan Valvano)</span></div>
+  </div>
+  <div class="m-row">
+    <div class="when">Sep 2016 – Jan 2021</div>
+    <div class="what">
+      <strong>University of Barishal, Bangladesh</strong>
+      <span class="sub">Lecturer (2016–2020) and Assistant Professor (2020–2021), Department of Computer Science and Engineering</span>
+      <ul>
+        <li>Designed and taught Programming Fundamentals, Object Oriented Programming, Artificial Intelligence, Digital Image Processing, and Discrete Mathematics</li>
+        <li>Supervised student research and projects on artificial intelligence</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EXPERIENCE ================= -->
+<section id="experience">
+  <h2 class="m-title">Professional Experience</h2>
+  <div class="m-row"><div class="when">Fall 2026 – Present</div><div class="what"><strong>Texas Tech University</strong><span class="sub">Tenure-track Assistant Professor, Department of Electrical and Computer Engineering</span></div></div>
+  <div class="m-row"><div class="when">Jan 2022 – Jun 2026</div><div class="what"><strong>The University of Texas at Austin</strong><span class="sub">Graduate Research Assistant, System Level Design Group, advised by Dr. Radu Marculescu</span></div></div>
+  <!-- TODO confirm the GE internship end date -->
+  <div class="m-row"><div class="when">May 2025 – 2026</div><div class="what"><strong>GE HealthCare, San Ramon, CA</strong><span class="sub">AI/ML PhD Intern, advised by Dr. Bruno Astuto A. Nunes and Dr. Ravi Soni</span></div></div>
+  <div class="m-row"><div class="when">May 2024 – Aug 2024</div><div class="what"><strong>National Institutes of Health (NIH)</strong><span class="sub">Summer IRTA Fellow, NHLBI, advised by Dr. Sarah Hooper and Dr. Christian Combs</span></div></div>
+  <div class="m-row"><div class="when">May 2023 – Aug 2023</div><div class="what"><strong>Bosch Research, Pittsburgh, PA</strong><span class="sub">Machine Learning Research Intern, advised by Dr. Chaithanya Kumar Mummadi and Dr. Filipe Condessa</span></div></div>
+  <div class="m-row"><div class="when">Jan 2021 – Aug 2021</div><div class="what"><strong>The University of Alabama, Tuscaloosa</strong><span class="sub">Graduate Research Assistant, Department of Computer Science, advised by Dr. Zhe Jiang</span></div></div>
+  <div class="m-row"><div class="when">May 2016 – Sep 2016</div><div class="what"><strong>Samsung Research, Bangladesh</strong><span class="sub">Senior Software Engineer, Advanced Solution Group</span></div></div>
+  <div class="m-row"><div class="when">Jan 2015 – May 2016</div><div class="what"><strong>University of Dhaka, Bangladesh</strong><span class="sub">Graduate Research Assistant, Institute of Information Technology, advised by Dr. Mohammad Shoyaib</span></div></div>
+  <div class="m-row"><div class="when">Jan 2014 – Jun 2014</div><div class="what"><strong>Progoti Systems Ltd. (SureCash), Bangladesh</strong><span class="sub">Software Engineer Intern</span></div></div>
+</section>
+
+<!-- ================= ADVISING & MENTORING ================= -->
+<section id="advising">
+  <h2 class="m-title">Advising &amp; Mentoring</h2>
+  <h3 class="m-sub">Current Research Mentees</h3>
+  <ul class="m-people">
+    <li><strong>Md Minhaj Ul Islam</strong> <span class="role">Remote Research Intern</span><br><span class="meta">M.S., University of Barishal (BU)</span><br><span class="meta">Co-authored paper under review at WACV 2027</span></li>
+    <li><strong>Sumaiya Islam</strong> <span class="role">Remote Research Intern</span><br><span class="meta">BSSE, Institute of Information Technology (IIT), University of Dhaka</span></li>
+  </ul>
+  <h3 class="m-sub">Past Mentees</h3>
+  <ul class="m-people">
+    <li><strong>Shruti Sriram</strong> <span class="meta">MSCS, The University of Texas at Austin</span><br><span class="meta">Co-authored paper under review at WACV 2027</span></li>
+    <li><strong>Riad Hassan</strong> <span class="meta">M.S., BUET, now at Green University of Bangladesh</span><br><span class="meta">Co-authored a Biomedical Signal Processing and Control article</span></li>
+    <li><strong>SM Nuruzzaman Nobel</strong> <span class="meta">B.S., BUBT, now at Monash University Malaysia</span></li>
+    <li><strong>Abu Saem Shefatullah</strong> <span class="meta">B.S., BU, first job at Google</span><br><span class="meta">Coached for ICPC 2018 and ICPC 2019</span></li>
+    <li><strong>Chandrika Saha</strong> <span class="meta">B.S., BU, first job at Outlier</span><br><span class="meta">Co-authored ICISET 2018, ECCE 2019, ICIEV 2019</span></li>
+    <li><strong>Umme Habiba</strong> <span class="meta">B.S., BU, first job at Green University of Bangladesh</span><br><span class="meta">Co-authored ECCE 2019, ICIEV 2019</span></li>
+    <li><strong>Md Rasel Howlader</strong> <span class="meta">B.S., BU</span><br><span class="meta">Co-authored ECCE 2019</span></li>
+    <li><strong>Md Aminul Islam</strong> <span class="meta">B.S., BU</span><br><span class="meta">Co-authored IC4ME2 2019</span></li>
+    <li><strong>Badal Chandra Mitra</strong> <span class="meta">B.S., BU</span><br><span class="meta">Co-authored IC4ME2 2019</span></li>
+    <li><strong>Ayesha Akter</strong> <span class="meta">B.S., BU</span><br><span class="meta">Co-authored IC4ME2 2019</span></li>
+    <li><strong>Sharmin Sultana</strong> <span class="meta">B.S., BU</span><br><span class="meta">Co-authored ICASERT 2019</span></li>
+    <li><strong>Nazifa Akter</strong> <span class="meta">B.S., BU</span><br><span class="meta">Co-authored ICASERT 2019</span></li>
+    <li><strong>Sadia Khan Rupa</strong> <span class="meta">M.S., Bangladesh University of Professionals (BUP)</span></li>
+    <li><strong>Samiul Islam Jehad</strong> <span class="meta">B.S., BU, first job at Enosis Solutions</span><br><span class="meta">Coached for ICPC 2017</span></li>
+  </ul>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section id="services">
+  <h2 class="m-title">Academic Services</h2>
+  <div class="m-row"><div class="when">Conference Reviewer</div><div class="what">NeurIPS (2026 <span style="color:var(--ttu-red);font-weight:900">🏆 Top Reviewer</span>, 2024), MICCAI (2026, 2025, 2024), BMVC 2026, ICLR (2026, 2025), ICCV 2025, CVPR (2025, 2024), WACV (2025, 2024, 2023), ISBI (2027, 2025, 2024)</div></div>
+  <div class="m-row"><div class="when">Workshop Reviewer</div><div class="what">ShapeMI @ MICCAI 2026, AIM @ NeurIPS 2026, CVAMD @ ICCV 2025</div></div>
+  <div class="m-row"><div class="when">Journal Reviewer</div><div class="what">IEEE TPAMI, IEEE TMI, Medical Image Analysis, IEEE TIP, IEEE TCSVT, IEEE TNNLS, Pattern Recognition Letters, Computers in Biology and Medicine, Expert Systems with Applications, PLOS ONE</div></div>
+  <div class="m-row"><div class="when">Shadow Reviewer</div><div class="what">WACV 2026, CVPR 2025, NeurIPS 2023, NeurIPS 2022, IEEE TMI</div></div>
+</section>
+
+<!-- ================= TALKS ================= -->
+<section id="presentations">
+  <h2 class="m-title">Talks &amp; Presentations</h2>
+  <div class="m-row"><div class="when">Sep 2026</div><div class="what"><span class="kind">Oral Presentation &amp; Poster (PhD Thesis Madness)</span><strong><i>Hardware-Efficient, Scalable, and Label-Efficient Deep Learning Methods for Medical Imaging</i></strong><span class="sub">MICCAI 2026 Doctoral Symposium, Strasbourg, France</span></div></div>
+  <div class="m-row"><div class="when">May 2026</div><div class="what"><span class="kind">Invited Talk</span><strong><i>Efficient and Reliable AI for Healthcare</i></strong><span class="sub">The AI, ML, and Computer Vision Meetup, Voxel51 Events · <a href="https://www.youtube.com/watch?v=RDnMhCu0shs" target="_blank" rel="noopener">Watch</a></span></div></div>
+  <div class="m-row"><div class="when">Dec 2025</div><div class="what"><span class="kind">Poster</span><strong><i>LoMix: Learnable Weighted Multi-Scale Logits Mixing for Medical Image Segmentation</i></strong><span class="sub">Conference on Neural Information Processing Systems (NeurIPS), San Diego, California</span></div></div>
+  <div class="m-row"><div class="when">Oct 2025</div><div class="what"><span class="kind">Oral Presentation</span><strong><i>MK-UNet: Multi-kernel Lightweight CNN for Medical Image Segmentation</i></strong><span class="sub">CVAMD Workshop, IEEE/CVF International Conference on Computer Vision (ICCV), Honolulu, Hawaii</span></div></div>
+  <div class="m-row"><div class="when">Oct 2025</div><div class="what"><span class="kind">Poster</span><strong><i>Training-Free Dataset Pruning for Polyp Segmentation via Community Detection in Similarity Networks</i></strong><span class="sub">iMAGiNE Consortium Poster Session at AMD</span></div></div>
+  <div class="m-row"><div class="when">Sep 2025</div><div class="what"><span class="kind">Highlight Poster</span><strong><i>EfficientMedNeXt: Multi-Receptive Dilated Convolutions for Medical Image Segmentation</i></strong><span class="sub">MICCAI, Daejeon, South Korea</span></div></div>
+  <div class="m-row"><div class="when">Sep 2025</div><div class="what"><span class="kind">Invited Talk</span><strong><i>EfficientMedNeXt: Multi-Receptive Dilated Convolutions for Medical Image Segmentation</i></strong><span class="sub">San Ramon Journal Club, GE HealthCare</span></div></div>
+  <div class="m-row"><div class="when">Aug 2025</div><div class="what"><span class="kind">Invited Talk</span><strong><i>EffiDec3D: An Optimized Decoder for High-Performance and Efficient 3D Medical Image Segmentation</i></strong><span class="sub">The AI, ML, and Computer Vision Meetup, Voxel51 Events · <a href="https://youtu.be/3OXza9rMX6E" target="_blank" rel="noopener">Watch</a></span></div></div>
+  <div class="m-row"><div class="when">Aug 2025</div><div class="what"><span class="kind">Internship Talk</span><strong><i>Lightweight Architecture for Edge-AI</i></strong><span class="sub">GE HealthCare, San Ramon, California</span></div></div>
+  <div class="m-row"><div class="when">Jul 2025</div><div class="what"><span class="kind">Oral Presentation &amp; Highlight Poster</span><strong><i>Training-Free Dataset Pruning for Polyp Segmentation via Community Detection in Similarity Networks</i></strong><span class="sub">Medical Imaging with Deep Learning (MIDL), Salt Lake City, Utah</span></div></div>
+  <div class="m-row"><div class="when">Jul 2025</div><div class="what"><span class="kind">Invited Talk</span><strong><i>Training-Free Dataset Pruning for Polyp Segmentation via Community Detection in Similarity Networks</i></strong><span class="sub">San Ramon Journal Club, GE HealthCare</span></div></div>
+  <div class="m-row"><div class="when">Jun 2025</div><div class="what"><span class="kind">Invited Talk</span><strong><i>EffiDec3D: An Optimized Decoder for High-Performance and Efficient 3D Medical Image Segmentation</i></strong><span class="sub">San Ramon Journal Club, GE HealthCare</span></div></div>
+  <div class="m-row"><div class="when">Jun 2025</div><div class="what"><span class="kind">Highlight Poster</span><strong><i>EffiDec3D: An Optimized Decoder for High-Performance and Efficient 3D Medical Image Segmentation</i></strong><span class="sub">IEEE/CVF CVPR, Nashville, Tennessee</span></div></div>
+  <div class="m-row"><div class="when">Jun 2025</div><div class="what"><span class="kind">Poster</span><strong><i>From Data to Design: Leveraging Frequency Statistics for Efficient Neural Network Architectures</i></strong><span class="sub">IEEE/CVF CVPR Workshops, Nashville, Tennessee</span></div></div>
+  <div class="m-row"><div class="when">Apr 2025</div><div class="what"><span class="kind">Invited Talk</span><strong><i>Towards Efficient AI for Biomedical Imaging: Reducing Computation and Data Demands</i></strong><span class="sub">Stanford MedAI · <a href="https://www.youtube.com/watch?v=HsqIxvm8Sdw" target="_blank" rel="noopener">Watch</a></span></div></div>
+  <div class="m-row"><div class="when">Apr 2025</div><div class="what"><span class="kind">Guest Lecture</span><strong><i>Deep Learning in Biomedical Imaging</i></strong><span class="sub">ECE379K (Machine Learning and Data Analytics for EdgeAI), The University of Texas at Austin</span></div></div>
+  <div class="m-row"><div class="when">Apr 2025</div><div class="what"><span class="kind">Poster</span><strong><i>EMCAD: Efficient Multi-scale Convolutional Attention Decoding for Medical Image Segmentation</i></strong><span class="sub">iMAGiNE Consortium, The University of Texas at Austin</span></div></div>
+  <div class="m-row"><div class="when">Jan 2025</div><div class="what"><span class="kind">Poster</span><strong><i>EMCAD: Efficient Multi-scale Convolutional Attention Decoding for Medical Image Segmentation</i></strong><span class="sub">Graduate and Industry Networking Event (GAIN), The University of Texas at Austin</span></div></div>
+  <div class="m-row"><div class="when">Aug 2024</div><div class="what"><span class="kind">Invited Talk</span><strong><i>Efficient Deep Learning for Biomedical Imaging</i></strong><span class="sub">National Heart, Lung, and Blood Institute (NHLBI), NIH</span></div></div>
+  <div class="m-row"><div class="when">Aug 2024</div><div class="what"><span class="kind">Internship Talk &amp; Poster</span><strong><i>Universal Light Microscopy Denoising via Lightweight Multi-scale Convolutional Transformer</i></strong><span class="sub">Office of AI Research (OAIR), NIH</span></div></div>
+  <div class="m-row"><div class="when">Jun 2024</div><div class="what"><span class="kind">Posters</span><strong><i>EMCAD</i>, <i>GreedyViG</i>, and <i>PP-SAM</i></strong><span class="sub">IEEE/CVF CVPR and CVPR Workshops, Seattle, Washington</span></div></div>
+  <div class="m-row"><div class="when">Jan 2024</div><div class="what"><span class="kind">Poster</span><strong><i>G-CASCADE: Efficient Cascaded Graph Convolutional Decoding for 2D Medical Image Segmentation</i></strong><span class="sub">IEEE/CVF WACV, Waikoloa, Hawaii, and GAIN, The University of Texas at Austin</span></div></div>
+  <div class="m-row"><div class="when">Aug 2023</div><div class="what"><span class="kind">Internship Poster</span><strong><i>Single Image Depth Prediction with Deep Scene Regularization</i></strong><span class="sub">Bosch Center for Artificial Intelligence (BCAI), Pittsburgh</span></div></div>
+  <div class="m-row"><div class="when">Jul 2023</div><div class="what"><span class="kind">Spotlight Talk &amp; Poster</span><strong><i>Multi-scale Hierarchical Vision Transformer with Cascaded Attention Decoding for Medical Image Segmentation</i></strong><span class="sub">Medical Imaging with Deep Learning (MIDL), Nashville, Tennessee</span></div></div>
+  <div class="m-row"><div class="when">Jan 2023</div><div class="what"><span class="kind">Poster</span><strong><i>Medical Image Segmentation via Cascaded Attention Decoding</i></strong><span class="sub">IEEE/CVF WACV, Waikoloa, Hawaii, GAIN (Jan 2023), and iMAGiNE Consortium (Mar 2023), The University of Texas at Austin</span></div></div>
+  <div class="m-row"><div class="when">Dec 2015</div><div class="what"><span class="kind">Oral Presentation</span><strong><i>Noise Adaptive Binary Pattern for Face Image Analysis</i></strong><span class="sub">International Conference on Computer and Information Technology (ICCIT), Dhaka, Bangladesh</span></div></div>
+</section>
+
+<!-- ================= PROSPECTIVE STUDENTS ================= -->
+<section id="students">
+  <h2 class="m-title">Prospective Students</h2>
+  <div class="m-card recruit">
+    <p>I have <b>Ph.D. openings for Spring and Fall 2027</b> in <b>trustworthy and efficient AI</b>, with projects in
+       Physical and Embodied AI, Computer Vision, Biomedical Imaging and Healthcare, Trustworthy and Secure AI,
+       Neuroimaging (Alzheimer's disease, dementia, and autism), and AI for Good. Students work with emerging technologies
+       such as Vision-Language Models, Multimodal Models for imaging and multi-omics, World Models, Agentic AI, Digital Twins, and Quantum Machine Learning.</p>
+    <p>To apply, email <b>mostafijur.rahman [at] ttu.edu</b> with your CV, transcripts, and a short note on your
+       research interests, and apply to the <a href="https://www.depts.ttu.edu/ece/" target="_blank" rel="noopener">TTU ECE graduate program</a>
+       mentioning my name. TTU undergraduate and M.S. students interested in research are also welcome to reach out.</p>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact">
+  <h2 class="m-title">Contact</h2>
+  <div class="m-cards">
+    <div class="m-card">
+      <h4>Address</h4>
+      <p>Room Number ECE 234<br>Texas Tech University<br>Department of Electrical &amp; Computer Engineering<br>Box 43102<br>Lubbock, TX 79409-3102<br>United States</p>
+    </div>
+    <div class="m-card email">
+      <h4>Email</h4>
+      <p>mostafijur.rahman [at] ttu.edu<br>mostafijur.rahman [at] utexas.edu</p>
+    </div>
+    <div class="m-card">
+      <h4>Phone and Profile</h4>
+      <p>806.834.1162<br><a href="https://www.depts.ttu.edu/ece/faculty/mostafijur_rahman/index.php" target="_blank" rel="noopener">TTU ECE faculty profile</a></p>
+    </div>
+  </div>
+</section>
+
+        </main>
+
+        <!-- Footer -->
+        <div class="uk-section uk-flex uk-flex-center uk-section-secondary uk-height-small" style="background-color: #BF5701">
+            <div class="uk-container uk-container-large uk-text-primary">
+                <p class="uk-text-small uk-text-center" style="color:#fff">Copyright &copy; 2026 Md Mostafijur Rahman. All Rights Reserved.</p>
+            </div>
+        </div>
+    </body>
+</html>

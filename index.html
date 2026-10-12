@@ -41,6 +41,13 @@
             a:hover { color: var(--brand); }
 
             /* ===== Original top: menu bar, photo, intro ===== */
+            .research-points { list-style: none; margin: 0 0 12px; padding: 0; }
+            .research-points li { position: relative; padding: 4px 0 4px 34px; }
+            .research-points li::before {
+                content: ""; position: absolute; left: 6px; top: 13px; width: 8px; height: 8px;
+                border: 2px solid var(--ink); border-radius: 50%;
+            }
+            .research-points b { margin-right: 4px; }
             .uk-navbar-container { background-color: #BF5701 !important; }
             .uk-logo { font-weight: 700; }
             .announcement-box {
@@ -217,14 +224,18 @@
                         advised by
                         <a href="https://radum.ece.utexas.edu/people/" target="_blank" rel="noopener noreferrer">Prof. Radu Marculescu</a>.
                     </p>
+                    <p class="uk-margin-small-bottom">
+                        My research focuses on <b>Trustworthy and Efficient AI</b>. I design machine learning algorithms and architectures
+                        that maximize performance using less data, minimal computation, and lower costs while ensuring reliability in
+                        high-stakes environments.
+                    </p>
+                    <ul class="research-points">
+                        <li><b>Algorithms:</b> Foundation Models (VLMs, multimodal systems, world models, and agentic AI), Digital Twins, and Quantum Machine Learning.</li>
+                        <li><b>Applications:</b> Biomedical Imaging and Healthcare, Computer Vision for Societal Impact, and Physical and Embodied AI.</li>
+                        <li><b>Mission:</b> Bringing reliable and low-resource AI to the people, places, and devices that need it most.</li>
+                    </ul>
                     <p>
-                        My research is in <b>Trustworthy and Efficient AI</b>. I develop machine learning algorithms and architectures
-                        that <b>do more with less</b>, delivering strong performance with less data, less computation, and lower cost while
-                        staying reliable in high-stakes settings. My recent focus is on <b>Foundation Models</b>
-                        (Vision-Language Models, Multimodal Models, World Models, and Agentic AI), <b>Digital Twins</b>, and <b>Quantum Machine Learning</b>,
-                        and on making them practical for Biomedical Imaging and Healthcare, Computer Vision for Societal Impact, and Physical and Embodied AI.
-                        My long-term goal is to bring the benefits of AI to every hospital, device, and community that needs them.
-                        This work has appeared at CVPR, NeurIPS, MICCAI, ICCV, MIDL, WACV, and ICASSP.
+                        This work appears in top venues including CVPR, NeurIPS, MICCAI, ICCV, MIDL, WACV, and ICASSP.
                     </p>
                     <p>
                         I completed research internships at
@@ -627,8 +638,11 @@
   <h2 class="m-title">Advising &amp; Mentoring</h2>
   <h3 class="m-sub">Current Research Mentees</h3>
   <ul class="m-people">
-    <li><strong>Md Minhaj Ul Islam</strong> <span class="role">Remote Research Intern</span><br><span class="meta">M.S., University of Barishal (BU)</span><br><span class="meta">Co-authored paper under review at WACV 2027</span></li>
+    <li><strong>Joyadittya Barno</strong> <span class="role">Graduate Researcher</span><br><span class="meta">M.S., Electrical and Computer Engineering, Texas Tech University</span></li>
+    <li><strong>Ruskin Sohar</strong> <span class="role">Undergraduate Researcher</span><br><span class="meta">B.S., Electrical and Computer Engineering, Texas Tech University</span></li>
     <li><strong>Sumaiya Islam</strong> <span class="role">Remote Research Intern</span><br><span class="meta">BSSE, Institute of Information Technology (IIT), University of Dhaka</span></li>
+    <li><strong>Dania Khan</strong> <span class="role">Remote Research Intern</span><br><span class="meta">B.S., Biomedical Engineering (BME), Bangladesh University of Engineering and Technology (BUET)</span></li>
+    <li><strong>Md Minhaj Ul Islam</strong> <span class="role">Remote Research Intern</span><br><span class="meta">M.S., University of Barishal (BU)</span><br><span class="meta">Co-authored paper under review at WACV 2027</span></li>
   </ul>
   <h3 class="m-sub">Past Mentees</h3>
   <ul class="m-people">
