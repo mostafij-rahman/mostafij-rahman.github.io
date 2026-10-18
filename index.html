@@ -150,6 +150,8 @@
 
             /* Hero */
             .hero-photo { max-width: 210px; margin: 0 auto; }
+            .cv-icon { align-self: center; display: inline-flex; align-items: center; gap: 5px; padding: 3px 12px !important; border: 1.5px solid #BF5700 !important; border-radius: 999px !important; color: var(--brand) !important; font-weight: 700; font-size: .9rem; line-height: 1.2; text-decoration: none !important; transition: background .15s, color .15s; }
+            .cv-icon:hover { background: var(--brand); color: #fff !important; }
             .hero-text p { margin: 0 0 8px; }
             .hero-mission { margin: 4px 0 6px; }
             .uk-navbar-nav > li > a { min-height: 56px; font-size: .82rem; padding: 0 11px; }
@@ -168,7 +170,6 @@
             <div class="uk-navbar-right">
                 <ul class="uk-navbar-nav">
                     <li class="uk-active uk-visible@m"> <a href="index.html"> Home </a> </li>
-                    <li class="uk-active uk-visible@m"> <a href="https://utexas.app.box.com/file/1735637639142?s=f93s0hfwhyxsbit74edl01ejw7o049of" target='_'> CV </a> </li>
                     <li class="uk-active uk-visible@m"> <a href="index.html#news"> News </a> </li>
                     <li class="uk-active uk-visible@m"> <a href="index.html#research"> Publications </a> </li>
                     <li class="uk-active uk-visible@m"> <a href="index.html#award"> Awards </a> </li>
@@ -187,7 +188,6 @@
             <div class="uk-offcanvas-bar uk-flex uk-flex-column">
                 <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
                     <li class="uk-active"> <a href="index.html"> Home </a> </li>
-                    <li class="uk-active"> <a href="https://utexas.app.box.com/file/1735637639142?s=f93s0hfwhyxsbit74edl01ejw7o049of" target='_'> CV </a> </li>
                     <li class="uk-active"> <a href="index.html#news"> News </a> </li>
                     <li class="uk-active"> <a href="index.html#research"> Publications </a> </li>
                     <li class="uk-active"> <a href="index.html#award"> Awards </a> </li>
@@ -206,9 +206,10 @@
             <div class="uk-container uk-width-1-1 uk-width-3-4@m uk-padding-small" uk-grid>
                 <a class="uk-flex uk-flex-center uk-width-1-1 uk-width-auto@m" href="#">
                     <div class="hero-photo">
-                        <img class="uk-border-circle uk-responsive-height uk-responsive-width" src="Mostafijur_headshot.png" alt="Portrait" /> </br>
+                        <img class="uk-border-circle uk-responsive-height uk-responsive-width" src="Mostafijur_headshot.png" alt="Portrait" />
                         <!-- SOCIAL ICONS -->
                         <div class="uk-flex uk-flex-center uk-margin-small-top">
+                            <a href="https://utexas.app.box.com/file/1735637639142?s=f93s0hfwhyxsbit74edl01ejw7o049of" class="uk-margin-small-right cv-icon" aria-label="CV" title="CV" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> CV</a>
                             <a href="mailto:mostafijur.rahman@ttu.edu" class="uk-margin-small-right" aria-label="Email" style="font-size: 1.45em;">
                                 <i class="fas fa-envelope"></i>
                             </a>
