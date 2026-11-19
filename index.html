@@ -98,7 +98,7 @@
             .m-pub .venue { display: inline-block; font-size: .7rem; font-weight: 700; color: #fff; background: var(--venue); padding: 1px 7px; border-radius: 4px; margin-right: 7px; vertical-align: 2px; letter-spacing: .02em; }
             .m-pub .title { font-weight: 600; font-size: .98rem; color: var(--title); }
             .m-pub .authors { color: var(--ink); font-size: .88rem; margin-top: 2px; }
-            .m-pub .where { display: none; }
+            .m-pub .where { display: block; font-size: .84rem; font-style: italic; color: var(--muted); margin-top: 1px; }
             .m-pub .note { font-size: .82rem; color: var(--muted); }
             .m-pub .award { display: inline-block; color: var(--ttu-red); font-weight: 700; font-size: .85rem; margin-top: 2px; margin-right: 10px; }
             .m-links { margin-top: 5px; display: inline-flex; flex-wrap: wrap; gap: 6px; }
@@ -249,14 +249,17 @@
                         <a href="https://www.bosch-ai.com/" target="_blank" rel="noopener noreferrer">Bosch AI</a>.
                     </p>
                     <p>
-                        I develop <b>Trustworthy and Efficient AI</b> by designing machine learning algorithms and architectures
-                        that remain accurate and reliable under limited data and computation. Building on my work in efficient and
-                        robust visual perception, I am extending it to multimodal and embodied AI for healthcare, robotics, and societal impact.
+                        I develop <b>Trustworthy and Scalable AI</b>, connecting principled algorithm design with the practical
+                        challenges of real-world deployment. My group designs foundational computer vision and machine learning
+                        algorithms that stay reliable with limited data, labels, and compute, validates them with clinicians on
+                        patient data, and extends them to multimodal, embodied, and quantum AI for discovery and impact in
+                        healthcare, robotics, and science.
                     </p>
                     <ul class="research-points">
-                        <li><b>Efficient Learning:</b> Algorithms that need less data, labels, and compute, from edge AI to quantum machine learning.</li>
-                        <li><b>Trustworthy and Secure AI:</b> Foundation models that remain robust and secure in high-stakes decisions.</li>
-                        <li><b>Human-Centered and Embodied AI:</b> Multimodal and world models that perceive, reason, and act with people.</li>
+                        <li><b>Scalable and Edge AI:</b> Frugal models and training that need little data, labels, and compute, strengthened by quantum entanglement in learned representations.</li>
+                        <li><b>Trustworthy and Secure AI:</b> Models that stay robust, resist attacks, and remain auditable in high-stakes use.</li>
+                        <li><b>AI for Medicine and Digital Biomarkers:</b> Multimodal models that fuse imaging, clinical, omics, and neural data for early detection of heart disease, cancer, and brain disorders.</li>
+                        <li><b>Embodied and Human-Centered AI:</b> World models and multimodal perception that help agents act alongside people.</li>
                     </ul>
                     <p class="hero-mission"><b>Mission:</b> Making reliable and resource-efficient AI accessible to the people, places, and devices that need it most.</p>
 
@@ -274,6 +277,7 @@
 <section id="news">
   <h2 class="m-title">News</h2>
   <ul class="m-news">
+    <li><span class="date">Nov 2026</span><span><span class="new">NEW</span>FMDNet, from my NIH internship, accepted to <span class="hl">Cell Reports Methods</span>.</span></li>
     <li><span class="date">Oct 2026</span><span><span class="new">NEW</span>Received the 🏆 <span class="hl">NeurIPS 2026 Top Reviewer Award</span>.</span></li>
     <li><span class="date">Sep 2026</span><span><span class="new">NEW</span>Presented my thesis (oral and poster) at <span class="hl">PhD Thesis Madness</span>, MICCAI 2026 Doctoral Symposium in Strasbourg. 🎤</span></li>
     <li><span class="date">Sep 2026</span><span><span class="new">NEW</span>Joined <span class="hl">Texas Tech University</span> as a tenure-track Assistant Professor of ECE.</span></li>
@@ -341,6 +345,12 @@
   <div class="m-year">2026</div>
   <ul>
     <li class="m-pub">
+      <div><span class="venue">J-CRM 2026</span><span class="title">FMDNet: A General Purpose, Pretrained Fluorescence Microscopy Denoising Network</span></div>
+      <div class="authors">Sarah Hooper, <b>Md Mostafijur Rahman</b>, Azaan Rehman, Robyn Wyrick, Alexander Zhovmer, Ryan O'Neill, Nasser Rusan, David A. Ball, Tatiana S. Karpova, Kelly Monaghan, Dorian B. McGavern, Hui Xue, Christian A. Combs</div>
+      <div class="where">Cell Reports Methods (accepted)</div>
+    </li>
+
+    <li class="m-pub">
       <div><span class="venue">WACVW 2027</span><span class="title">Coupled or Independent? Fault Coupling in Agentic Medical Vision Systems</span></div>
       <div class="authors">Nishi Kanta Paul, Md Shihabul Islam Shovo, <b>Md Mostafijur Rahman</b>, Jamil Fayyad</div>
       <div class="where">IEEE/CVF Winter Conference on Applications of Computer Vision Workshops (FABRIC)</div>
@@ -364,6 +374,7 @@
     <li class="m-pub">
       <div><span class="venue">arXiv 2026</span><span class="title">PipeFlow: Pipelining Inversion and Editing for Faster Long Form Video Synthesis</span></div>
       <div class="authors"><b>Md Mostafijur Rahman*</b>, Mustafa Munir*, Kartikeya Bhardwaj, Paul N. Whatmough, Radu Marculescu</div>
+      <div class="where">arXiv preprint arXiv:2512.24026</div>
       <div class="note">* Equal contribution</div>
       <div class="m-links"><a href="https://arxiv.org/pdf/2512.24026" target="_blank" rel="noopener">arXiv</a></div>
     </li>
@@ -665,14 +676,18 @@
   <h3 class="m-sub">Current Research Mentees</h3>
   <ul class="m-people">
     <li><strong>Joyadittya Barno</strong> <span class="role">Graduate Researcher</span><br><span class="meta">M.S., Electrical and Computer Engineering, Texas Tech University</span></li>
-    <li><strong>Ruskin Sohar</strong> <span class="role">Undergraduate Researcher</span><br><span class="meta">B.S., Electrical and Computer Engineering, Texas Tech University</span></li>
-    <li><strong>Sumaiya Islam</strong> <span class="role">Remote Research Intern</span><br><span class="meta">BSSE, Institute of Information Technology (IIT), University of Dhaka</span></li>
-    <li><strong>Dania Khan</strong> <span class="role">Remote Research Intern</span><br><span class="meta">B.S., Biomedical Engineering (BME), Bangladesh University of Engineering and Technology (BUET)</span></li>
-    <li><strong>Shahriar Kabir</strong> <span class="role">Remote Research Intern</span><br><span class="meta">B.S., Computer Science and Engineering (CSE), BUET</span></li>
+    <li><strong>Kaiser Hamid</strong> <span class="role">Co-advised Ph.D. Student</span><br><span class="meta">Ph.D., Industrial, Manufacturing, and Systems Engineering, Texas Tech University</span></li>
+    <li><strong>Mahdi Islam</strong> <span class="role">Remote Research Intern</span><br><span class="meta">M.S., Erasmus Mundus Joint Master in Medical Imaging and Applications (MAIA)</span></li>
     <li><strong>Md Minhaj Ul Islam</strong> <span class="role">Remote Research Intern</span><br><span class="meta">M.S., University of Barishal (BU)</span><br><span class="meta">Co-authored paper under review</span></li>
+    <li><strong>Ruskin Sohar</strong> <span class="role">Undergraduate Researcher</span><br><span class="meta">B.S., Electrical and Computer Engineering, Texas Tech University</span></li>
+    <li><strong>Dania Khan</strong> <span class="role">Remote Research Intern</span><br><span class="meta">B.S., Biomedical Engineering (BME), Bangladesh University of Engineering and Technology (BUET)</span></li>
+    <li><strong>Md Abrar Faiaz</strong> <span class="role">Remote Research Intern</span><br><span class="meta">B.S., Computer Engineering (CE), BUET</span></li>
+    <li><strong>Shahriar Kabir</strong> <span class="role">Remote Research Intern</span><br><span class="meta">B.S., Computer Science and Engineering (CSE), BUET</span><br><span class="meta">Co-authored paper under review</span></li>
+    <li><strong>Mahadi Hasan Shaisob</strong> <span class="role">Remote Research Intern</span><br><span class="meta">B.S., Electronics and Telecommunication Engineering (ETE), Rajshahi University of Engineering and Technology (RUET)</span></li>
   </ul>
   <h3 class="m-sub">Past Mentees</h3>
   <ul class="m-awards m-past">
+    <li><span><strong>Sumaiya Islam</strong> <span class="org">· BSSE, Institute of Information Technology (IIT), University of Dhaka; remote research intern</span></span><span class="yr">Past</span></li>
     <li><span><strong>Shruti Sriram</strong> <span class="org">· MSCS, The University of Texas at Austin; co-mentored; co-authored paper under review</span></span><span class="yr">Past</span></li>
     <li><span><strong>William Avery</strong> <span class="org">· M.S., The University of Texas at Austin; co-mentored; co-authored CVPR 2024 paper</span></span><span class="yr">Now at Apple</span></li>
     <li><span><strong>Riad Hassan</strong> <span class="org">· M.S., BUET; co-mentored; co-authored Biomed. Signal Process. Control article</span></span><span class="yr">Past</span></li>
